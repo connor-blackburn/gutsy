@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        
-    </head>
-    <body>
+{% extends 'base.html' %}
+{% block content %}
         {% for recipe in recipes%}
             {{recipe.dish_name}}
             {{recipe.dish_difficulty}}
             {{recipe.cuisine_name}}
-            {{recipe.serves}}
+            {{recipe.step_1}}
+            {{recipe.step_2}}
+            {{recipe.step_3}}
+            {{recipe.step_4}}
         {% endfor %}
-    </body>
-</html>
+{% endblock %}
