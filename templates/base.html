@@ -3,31 +3,70 @@
 
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 
 <body>
     <header>
+        <ul id="dropdown1" class="dropdown-content">
+            <li><a href="#!">Search Recipes</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">Create Recipes</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">Edit Recipes</a></li>
+        </ul>
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a href="#!">Search Cuisines</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">Create Cuisines</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">Edit Cuisines</a></li>
+        </ul>
+        <ul id="dropdown3" class="dropdown-content">
+            <li><a href="#!">Search Recipes</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">Create Recipes</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">Edit Recipes</a></li>
+        </ul>
+        <ul id="dropdown4" class="dropdown-content">
+            <li><a href="#!">Search Cuisines</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">Create Cuisines</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">Edit Cuisines</a></li>
+        </ul>
         <nav>
-            <div class="nav-wrapper teal lighten-2">
-                <a href="#" class="brand-logo">cookbook</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Recipes</a></li>
-                    <li><a href="badges.html">Cuisines</a></li>
-                    <li><a href="collapsible.html">Planner</a></li>
+            <div class="nav-wrapper blue accent-2">
+                <a href="#!" class="brand-logo">cookbook</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Cuisines<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a href="collapsible.html">Meal Planner</a></li>
                 </ul>
             </div>
         </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown3">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown4">Cuisines<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a href="collapsible.html">Meal Planner</a></li>
+        </ul>
     </header>
     {% block content %} {% endblock %}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
+            $('.dropdown-trigger').dropdown();
             $('.collapsible').collapsible();
+            $('.sidenav').sidenav();
         });
     </script>
+
+
 </body>
 
 </html>
