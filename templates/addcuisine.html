@@ -1,13 +1,13 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="description">
+<div class="row description container">
     <h3>Create / Add Cuisine</h3>
     <p>Please complete the short form below to add your desired cuisine to the cookbook.</p>
     <p>Only add a new cuisine if it is not already within the cookbook.</p>
     <p>To view this, please view the 'List Of Current Cuisines' below.</p>
 </div>
 
-<form action="{{ url_for('insert_cuisine') }}" method="POST" class="col s12">
+<form action="{{ url_for('insert_cuisine') }}" method="POST" class="col s12 container">
     <div class="row">
         <div class="input-field col s10">
             <i class="material-icons prefix">search</i>
