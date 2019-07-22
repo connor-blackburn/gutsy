@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="description">
+    <h3>Create / Add Cuisine</h3>
+    <p>Please complete the short form below to add your desired cuisine to the cookbook.</p>
+    <p>Only add a new cuisine if it is not already within the cookbook.</p>
+    <p>To view this, please view the 'List Of Current Cuisines' below.</p>
+</div>
+
+<form action="{{ url_for('insert_cuisine') }}" method="POST" class="col s12">
+    <div class="row">
+        <div class="input-field col s10">
+            <i class="material-icons prefix">search</i>
+            <select id="cuisines" name="cuisine_name">
+                <option value="" disabled selected>View List</option>
+                {% for cuisine in cuisines %}
+                    <option value="{{cuisine.cuisine_name}}">{{cuisine.cuisine_name}}</option>
+                {% endfor %}
+            </select>
+            <label>List Of Current Cuisines</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="input-field col s10">
+            <i class="material-icons prefix">mode_edit</i>
+            <textarea name="cuisine_name" id="cuisine_name" class="materialize-textarea" required></textarea>
+            <label for="icon_prefix2">Enter New Cuisine eg. 'Italian' or 'Indian'</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit Cuisine
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
+</form>
+{% endblock %}

@@ -9,28 +9,28 @@
 <body>
     <header>
         <ul id="dropdown1" class="dropdown-content">
-            <li><a href="#!">Search Recipes</a></li>
+            <li><a href="#!">View Recipes</a></li>
             <li class="divider"></li>
             <li><a href="#!">Create Recipes</a></li>
             <li class="divider"></li>
             <li><a href="#!">Edit Recipes</a></li>
         </ul>
         <ul id="dropdown2" class="dropdown-content">
-            <li><a href="#!">Search Cuisines</a></li>
+            <li><a href="#!">View Cuisines</a></li>
             <li class="divider"></li>
-            <li><a href="#!">Create Cuisines</a></li>
+            <li><a href="{{url_for('add_cuisine')}}">Create Cuisines</a></li>
             <li class="divider"></li>
             <li><a href="#!">Edit Cuisines</a></li>
         </ul>
         <ul id="dropdown3" class="dropdown-content">
-            <li><a href="#!">Search Recipes</a></li>
+            <li><a href="#!">View Recipes</a></li>
             <li class="divider"></li>
             <li><a href="#!">Create Recipes</a></li>
             <li class="divider"></li>
             <li><a href="#!">Edit Recipes</a></li>
         </ul>
         <ul id="dropdown4" class="dropdown-content">
-            <li><a href="#!">Search Cuisines</a></li>
+            <li><a href="#!">View Cuisines</a></li>
             <li class="divider"></li>
             <li><a href="#!">Create Cuisines</a></li>
             <li class="divider"></li>
@@ -63,6 +63,7 @@
             $('.dropdown-trigger').dropdown();
             $('.collapsible').collapsible();
             $('.sidenav').sidenav();
+            $('select').formSelect();
         });
     </script>
 
