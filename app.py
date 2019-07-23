@@ -26,9 +26,9 @@ def insert_cuisine():
     cuisines.insert_one(request.form.to_dict())
     return redirect(url_for('add_cuisine'))
 
-@app.route('/edit_cuisine')
-def edit_cuisine():
-    return render_template('editcuisine.html',
+@app.route('/get_cuisines')
+def get_cuisines():
+    return render_template('cuisines.html',
     cuisines=mongo.db.cuisines.find())
 
 if __name__ == '__main__':
