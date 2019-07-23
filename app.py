@@ -31,6 +31,11 @@ def get_cuisines():
     return render_template('cuisines.html',
     cuisines=mongo.db.cuisines.find())
 
+@app.route('/edit_cuisine/<cuisine_id>')
+def edit_cuisine(cuisine_id):
+    return render_template('editcuisine.html',
+    cuisines=mongo.db.cuisines.find_one({'_id': ObjectId(cuisine_id)}))
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
         port=int(os.environ.get('PORT')),
