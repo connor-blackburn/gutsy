@@ -12,7 +12,7 @@ mongo = PyMongo(app)
 
 @app.route('/')
 @app.route('/get_recipes')
-def hello():
+def get_recipes():
     return render_template('recipes.html', recipes=mongo.db.recipes.find())
     
 @app.route('/add_cuisine')
@@ -35,6 +35,13 @@ def get_cuisines():
 def edit_cuisine(cuisine_id):
     return render_template('editcuisine.html',
     cuisines=mongo.db.cuisines.find_one({'_id': ObjectId(cuisine_id)}))
+    
+@app.route('/update_cuisine/<cuisine_id>', methods=['POST'])
+def update_cuisine(cuisine_id):
+    mongo.db.cuisines.update(
+        {'_id': ObjectId(cuisine_id)},
+        {'cuisine_name': request.form.get('cuisine_name')})
+    return redirect(url_for('get_cuisines'))
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
