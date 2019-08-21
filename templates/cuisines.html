@@ -1,12 +1,14 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container">
     <div class="row">
-        <h2>Welcome To The Cuisines Page!</h2>
+        <blockquote>
+            <h2>Welcome To The Cuisines Page!</h2>
+        </blockquote>
     </div>
     <div class="row">
         {% for cuisine in cuisines %}
         <div class="col s12 m4 cardBox">
-            <div class="card blue lighten-5">
+            <div class="card blue lighten-5 z-depth-2">
                 <div class="card-content white-text">
                     <span class="card-title black-text center-align">{{cuisine.cuisine_name}}</span>
                 </div>

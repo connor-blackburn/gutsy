@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+    <div class="row heading">
+        <h1>Gutsy</h1>
+        <h5>An online cookbook made by the community <br/> <u>FOR</u> the community!</h5>
+        <div class="hero_image">
+            <img src="static/images/chefs.png" height="475" width="950">
+        </div>
+    </div>
+
+    <div class="row center-align">
+        <a class="btn-floating btn-large waves-effect waves-light blue lighten-1 pulse"><i class="material-icons">expand_more</i></a>
+    </div>
+
+    <div class="row">
+        {% for cuisine in cuisines %}
+        <div class="col s12 m4 cardBox">
+            <div class="card blue lighten-5 z-depth-2">
+                <div class="card-content white-text">
+                    <span class="card-title black-text center-align">{{cuisine.cuisine_name}}</span>
+                </div>
+                <div class="card-action center-align">
+                    <a href="" class="waves-effect waves-light btn-small green lighten-1">View {{cuisine.cuisine_name}} Recipes!</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endblock %}
