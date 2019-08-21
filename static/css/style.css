@@ -21,6 +21,13 @@ body {
     text-align: center;
 }
 
+.cuisine_selection {
+    text-align: center;
+}
+
+.cuisine_selection h1{
+    font-size: 5em;
+}
 .hero_image {
     margin: 0;
     z-index: -1;

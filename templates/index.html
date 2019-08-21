@@ -9,10 +9,13 @@
     </div>
 
     <div class="row center-align">
-        <a class="btn-floating btn-large waves-effect waves-light blue lighten-1 pulse"><i class="material-icons">expand_more</i></a>
+        <a class="btn-floating btn-large waves-effect waves-light blue lighten-1 pulse" href="#cuisine_section"><i class="material-icons">expand_more</i></a>
     </div>
 
-    <div class="row">
+    <div id="cuisine_section" class="row cuisine_selection">
+        <h1>Welcome to the Cuisine section</h1>
+        <h4>Choose the cuisine you want to view recipes!</h4>
+        
         {% for cuisine in cuisines %}
         <div class="col s12 m4 cardBox">
             <div class="card blue lighten-5 z-depth-2">
@@ -25,5 +28,6 @@
             </div>
         </div>
         {% endfor %}
+        
     </div>
     {% endblock %}
