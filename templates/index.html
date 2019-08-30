@@ -23,7 +23,7 @@
                     <span class="card-title black-text center-align">{{cuisine.cuisine_name}}</span>
                 </div>
                 <div class="card-action center-align">
-                    <a href="{{url_for('recipe_display')}}" class="waves-effect waves-light btn-small green lighten-1">View {{cuisine.cuisine_name}} Recipes!</a>
+                    <a href="{{url_for('recipe_display', cuisine_id=cuisine._id)}}" class="waves-effect waves-light btn-small green lighten-1">View {{cuisine.cuisine_name}} Recipes!</a>
                 </div>
             </div>
         </div>

@@ -1,8 +1,14 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="container">
-    <h1>Welcome to the Recipes Page!</h1>
+    
+    {% for cuisine in cuisines %}
+        <h1>Welcome to the {{cuisine.cuisine_name}} Page!</h1>
+    {% endfor %}
+    
     {% for recipe in recipes %}
+    {{recipe.dish_name}}
+    
     <ul class="collapsible popout">
         <li>
             <div class="collapsible-header"><i class="material-icons">restaurant_menu</i>{{recipe.cuisine_name}} - {{recipe.dish_name}} - {{recipe.dish_difficulty}}</div>

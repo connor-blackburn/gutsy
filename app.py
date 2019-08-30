@@ -60,10 +60,11 @@ def delete_cuisine(cuisine_id):
     return redirect(url_for('get_cuisines'))
 
 
-@app.route('/recipe_display')
-def recipe_display():
+@app.route('/recipe_display/<cuisine_id>')
+def recipe_display(cuisine_id):
     return render_template('recipe_display.html',
-    recipes=mongo.db.recipes.find())
+    recipes=mongo.db.recipes.find(),
+    cuisines=mongo.db.cuisines.find_one({'_id': ObjectId(cuisine_id)}))
 
 
 if __name__ == '__main__':
