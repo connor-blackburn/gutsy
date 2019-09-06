@@ -4,8 +4,7 @@
     <h1>Welcome to the {{cuisines.cuisine_name}} Page!</h1>
 
     {% for recipe in recipes %}
-        {% if cuisines.cuisine_name == recipes.cuisine_name %} 
-        
+    {% if cuisines.cuisine_name == recipe.dish_name %}
             {{recipe.dish_name}}
             <ul class="collapsible popout">
                 <li>
@@ -35,7 +34,7 @@
                         </span></div>
                 </li>
             </ul>
-        {% endif %}
+    {% endif %}
     {% endfor %} 
 </div>
 {% endblock %}
