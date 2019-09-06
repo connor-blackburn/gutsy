@@ -10,18 +10,15 @@ app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
 
 mongo = PyMongo(app)
 
+
+# Home Page - Index
 @app.route('/')
 @app.route('/home')
 def home():
     return render_template('index.html',
     cuisines=mongo.db.cuisines.find())
-
-
-@app.route('/get_recipes')
-def get_recipes():
-    return render_template('recipes.html', recipes=mongo.db.recipes.find())
     
-    
+
 @app.route('/add_cuisine')
 def add_cuisine():
     return render_template('addcuisine.html',
@@ -38,7 +35,12 @@ def insert_cuisine():
 def get_cuisines():
     return render_template('cuisines.html',
     cuisines=mongo.db.cuisines.find())
-
+    
+@app.route('/get_recipes')
+def get_recipes():
+    return render_template('get_recipes.html',
+    recipes=mongo.db.recipes.find(),
+    cuisines=mongo.db.cuisines.find())
 
 @app.route('/edit_cuisine/<cuisine_id>')
 def edit_cuisine(cuisine_id):
