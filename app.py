@@ -10,7 +10,6 @@ app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
 
 mongo = PyMongo(app)
 
-
 # Home Page - Index
 @app.route('/')
 @app.route('/home')
@@ -18,56 +17,51 @@ def home():
     return render_template('index.html',
     cuisines=mongo.db.cuisines.find())
     
-
-@app.route('/add_cuisine')
-def add_cuisine():
-    return render_template('addcuisine.html',
+# Create Cuisine Page - Short Form
+@app.route('/create_cuisine')
+def create_cuisine():
+    return render_template('create_cuisine.html',
     cuisines=mongo.db.cuisines.find())
 
+# Inserts New Cuisine To Site & Redirects Back To Cuisine Homepage
 @app.route('/insert_cuisine', methods=['POST'])
 def insert_cuisine():
     cuisines = mongo.db.cuisines
     cuisines.insert_one(request.form.to_dict())
-    return redirect(url_for('add_cuisine'))
+    return redirect(url_for('edit_cuisine_homepage'))
 
-
-@app.route('/get_cuisines')
-def get_cuisines():
-    return render_template('cuisines.html',
-    cuisines=mongo.db.cuisines.find())
-    
-@app.route('/get_recipes')
-def get_recipes():
-    return render_template('get_recipes.html',
-    recipes=mongo.db.recipes.find(),
+# Edit Cuisine Homepage - Shows Collection For User Choice
+@app.route('/edit_cuisine_homepage')
+def edit_cuisine_homepage():
+    return render_template('edit_cuisine_homepage.html',
     cuisines=mongo.db.cuisines.find())
 
+# Edit Cuisine Page, Cuisine Title Altered Here
 @app.route('/edit_cuisine/<cuisine_id>')
 def edit_cuisine(cuisine_id):
-    return render_template('editcuisine.html',
+    return render_template('edit_cuisine.html',
     cuisines=mongo.db.cuisines.find_one({'_id': ObjectId(cuisine_id)}))
     
-    
+#Confirms Cuisine Change & Redirects Back To Cuisine Homepage
 @app.route('/update_cuisine/<cuisine_id>', methods=['POST'])
 def update_cuisine(cuisine_id):
     mongo.db.cuisines.update(
         {'_id': ObjectId(cuisine_id)},
         {'cuisine_name': request.form.get('cuisine_name')})
-    return redirect(url_for('get_cuisines'))
+    return redirect(url_for('edit_cuisine_homepage'))
 
-
+# Confirms Cuisine Deletion & Redirects Back To Cuisine Homepage
 @app.route('/delete_cuisine/<cuisine_id>')
 def delete_cuisine(cuisine_id):
     mongo.db.cuisines.remove({'_id': ObjectId(cuisine_id)}),
-    return redirect(url_for('get_cuisines'))
+    return redirect(url_for('edit_cuisine_homepage'))
 
-
+# Displays Correct Recipe In Relation To Cuisine Chosen
 @app.route('/recipe_display/<cuisine_id>')
 def recipe_display(cuisine_id):
     return render_template('recipe_display.html',
     recipes=mongo.db.recipes.find(),
     cuisines=mongo.db.cuisines.find_one({'_id': ObjectId(cuisine_id)}))
-
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
