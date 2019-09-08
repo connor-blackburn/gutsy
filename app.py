@@ -63,6 +63,12 @@ def recipe_display(cuisine_id):
     recipes=mongo.db.recipes.find(),
     cuisines=mongo.db.cuisines.find_one({'_id': ObjectId(cuisine_id)}))
 
+# Displays Cuisines So Users Can Narrow Recipe Search Efficiently
+@app.route('/get_recipes')
+def get_recipes():
+    return render_template('get_recipes.html',
+    cuisines=mongo.db.cuisines.find())
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
         port=int(os.environ.get('PORT')),
