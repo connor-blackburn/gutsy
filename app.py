@@ -69,11 +69,18 @@ def get_recipes_step_one():
     return render_template('get_recipes_step_one.html',
     cuisines=mongo.db.cuisines.find())
 
+# Displays Recipes With Edit & Delete Buttons For User
 @app.route('/get_recipes_step_two/<cuisine_id>')
 def get_recipes_step_two(cuisine_id):
     return render_template('get_recipes_step_two.html',
     recipes=mongo.db.recipes.find(),
     cuisines=mongo.db.cuisines.find_one({'_id': ObjectId(cuisine_id)}))
+    
+# Confirms Cuisine Deletion & Redirects Back To Recipe Step One
+@app.route('/delete_recipe/<recipe_id>')
+def delete_recipe(recipe_id):
+    mongo.db.recipes.remove({'_id': ObjectId(recipe_id)}),
+    return redirect(url_for('get_recipes_step_one'))
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

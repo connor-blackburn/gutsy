@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="container">
-    <h1>Welcome to the {{cuisines.cuisine_name}} Edit Page!</h1>
+    <h1>Welcome to the {{cuisines.cuisine_name}} Recipe Edit Page!</h1>
     <h5>Find the recipe you want to edit, and work your magic!</h5>
 
     {% for recipe in recipes %} {% if cuisines.cuisine_name == recipe.cuisine_name %} {{recipe.dish_name}}
@@ -10,7 +10,7 @@
             <div class="collapsible-header">
                 <div class="card-action edit-buttons center-align">
                     <a href="#" class="waves-effect waves-light btn-small green lighten-1">Edit</a>
-                    <a href="#" class="waves-effect waves-light btn-small  red lighten-1">Delete</a>
+                    <a href="{{url_for('delete_recipe', recipe_id =recipe._id)}}" class="waves-effect waves-light btn-small  red lighten-1">Delete</a>
                 </div>
                 {{recipe.cuisine_name}} - {{recipe.dish_name}} - {{recipe.dish_difficulty}}
             </div>
@@ -40,7 +40,6 @@
         </li>
     </ul>
     {% else %}
-    <p>No recipes here yet! Come back later..</p>
     {% endif %} {% endfor %}
 </div>
 {% endblock %}
