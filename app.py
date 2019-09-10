@@ -42,7 +42,7 @@ def edit_cuisine(cuisine_id):
     return render_template('edit_cuisine.html',
     cuisines=mongo.db.cuisines.find_one({'_id': ObjectId(cuisine_id)}))
     
-#Confirms Cuisine Change & Redirects Back To Cuisine Homepage
+# Confirms Cuisine Change & Redirects Back To Cuisine Homepage
 @app.route('/update_cuisine/<cuisine_id>', methods=['POST'])
 def update_cuisine(cuisine_id):
     mongo.db.cuisines.update(
@@ -64,10 +64,16 @@ def recipe_display(cuisine_id):
     cuisines=mongo.db.cuisines.find_one({'_id': ObjectId(cuisine_id)}))
 
 # Displays Cuisines So Users Can Narrow Recipe Search Efficiently
-@app.route('/get_recipes')
-def get_recipes():
-    return render_template('get_recipes.html',
+@app.route('/get_recipes_step_one')
+def get_recipes_step_one():
+    return render_template('get_recipes_step_one.html',
     cuisines=mongo.db.cuisines.find())
+
+@app.route('/get_recipes_step_two/<cuisine_id>')
+def get_recipes_step_two(cuisine_id):
+    return render_template('get_recipes_step_two.html',
+    recipes=mongo.db.recipes.find(),
+    cuisines=mongo.db.cuisines.find_one({'_id': ObjectId(cuisine_id)}))
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+    <h1>Welcome to the {{cuisines.cuisine_name}} Edit Page!</h1>
+    <h5>Find the recipe you want to edit, and work your magic!</h5>
+
+    {% for recipe in recipes %} {% if cuisines.cuisine_name == recipe.cuisine_name %} {{recipe.dish_name}}
+    <ul class="collapsible popout">
+        <li>
+            <div class="collapsible-header">
+                <div class="card-action edit-buttons center-align">
+                    <a href="#" class="waves-effect waves-light btn-small green lighten-1">Edit</a>
+                    <a href="#" class="waves-effect waves-light btn-small  red lighten-1">Delete</a>
+                </div>
+                {{recipe.cuisine_name}} - {{recipe.dish_name}} - {{recipe.dish_difficulty}}
+            </div>
+            <div class="collapsible-body"><span>
+                            <h4>{{recipe.dish_name}}</4>
+                            <h5>Ingredients:</h5>
+                            <ul>
+                                <li>{{recipe.ingredient_1}}</li>
+                                <li>{{recipe.ingredient_2}}</li>
+                                <li>{{recipe.ingredient_3}}</li>
+                                <li>{{recipe.ingredient_4}}</li>
+                                <li>{{recipe.ingredient_5}}</li>
+                                <li>{{recipe.ingredient_6}}</li>
+                                <li>{{recipe.ingredient_7}}</li>
+                                <li>{{recipe.ingredient_8}}</li>
+                                <li>{{recipe.ingredient_9}}</li>
+                            </ul>
+                            <br/>
+                            <h5>Steps:</h5>
+                            <ul>
+                                <li>1. {{recipe.step_1}}</li><br/>
+                                <li>2. {{recipe.step_2}}</li><br/>
+                                <li>3. {{recipe.step_3}}</li><br/>
+                                <li>4. {{recipe.step_4}}</li><br/>
+                            </ul>
+                        </span></div>
+        </li>
+    </ul>
+    {% else %}
+    <p>No recipes here yet! Come back later..</p>
+    {% endif %} {% endfor %}
+</div>
+{% endblock %}
