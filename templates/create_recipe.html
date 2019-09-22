@@ -1,0 +1,105 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="row description container">
+    <h3>Create / Add Recipe</h3>
+    <p>Please complete the short form below to add your desired recipe to the cookbook.</p>
+</div>
+
+<form action="{{ url_for('insert_cuisine') }}" method="POST" class="col s12 container">
+
+    <div class="row">
+        <div class="input-field col s6">
+            <i class="material-icons prefix">create</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Dish Name</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s10">
+            <i class="material-icons prefix">search</i>
+            <select id="cuisines" name="cuisine_name">
+                <option value="" disabled selected>What Type Of Meal Is This?</option>
+                {% for cuisine in cuisines %}
+                    <option value="{{cuisine.cuisine_name}}">{{cuisine.cuisine_name}}</option>
+                {% endfor %}
+            </select>
+            <label>Cuisine List</label>
+            <p>Recipe type not here? Create it at 'Cuisines' dropdown at the top of the page.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s10">
+            <i class="material-icons prefix">search</i>
+            <select id="cuisines" name="cuisine_name">
+                <option value="" disabled selected>How Hard Is This Dish To Create?</option>
+                    <option>Easy</option>
+                    <option>Medium</option>
+                    <option>Hard</option>
+            </select>
+            <label>Dish Difficulties</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+            <i class="material-icons prefix">create</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Ingredient 1</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+            <i class="material-icons prefix">create</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Ingredient 2</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+            <i class="material-icons prefix">create</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Ingredient 3</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+            <i class="material-icons prefix">create</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Ingredient 4</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+            <i class="material-icons prefix">create</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Ingredient 5</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+            <i class="material-icons prefix">create</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Ingredient 6</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+            <i class="material-icons prefix">create</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Ingredient 7</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6">
+            <i class="material-icons prefix">create</i>
+            <input id="icon_prefix" type="text" class="validate">
+            <label for="icon_prefix">Ingredient 8</label>
+        </div>
+    </div>
+
+    <div class="row">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit Cuisine
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
+</form>
+{% endblock %}

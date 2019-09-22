@@ -82,6 +82,14 @@ def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)}),
     return redirect(url_for('get_recipes_step_one'))
 
+#SPACE FOR RECIPE EDIT 
+
+@app.route('/create_recipe')
+def create_recipe():
+    return render_template('create_recipe.html',
+    recipes=mongo.db.recipes.find(),
+    cuisines=mongo.db.cuisines.find()) 
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
         port=int(os.environ.get('PORT')),
