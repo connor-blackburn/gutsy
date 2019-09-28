@@ -84,13 +84,14 @@ def delete_recipe(recipe_id):
 
 #SPACE FOR RECIPE EDIT 
 
-# Allows User To Fill Form Regarding New Recipe
+# Allows User To Fill Form Creating New Recipe
 @app.route('/create_recipe')
 def create_recipe():
     return render_template('create_recipe.html',
     recipes=mongo.db.recipes.find(),
     cuisines=mongo.db.cuisines.find()) 
-    
+
+# This Allows The Form To Update Theh Database
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipes = mongo.db.recipes
