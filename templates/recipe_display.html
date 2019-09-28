@@ -9,7 +9,9 @@
             <div class="collapsible-header"><i class="material-icons">restaurant_menu</i>{{recipe.cuisine_name}} - {{recipe.dish_name}} - {{recipe.dish_difficulty}}</div>
             <div class="collapsible-body"><span>
                                 <h4>{{recipe.dish_name}}</4>
+                                <h6>This Dish Will Serve: {{recipe.serves}} Person(s).</h6>
                             <h5>Ingredients:</h5>
+                            <blockquote>
                             <ul>
                                 <li>1. {{recipe.ingredient_1}}</li>
                                 <li>2. {{recipe.ingredient_2}}</li>
@@ -21,19 +23,22 @@
                                 <li>8. {{recipe.ingredient_8}}</li>
                                 <li>9. {{recipe.ingredient_9}}</li>
                             </ul>
+                            </blockquote>
                             <br/>
                             <h5>Steps:</h5>
+                            <blockquote>
+
                             <ul>
                                 <li>1. {{recipe.step_1}}</li><br/>
                                 <li>2. {{recipe.step_2}}</li><br/>
                                 <li>3. {{recipe.step_3}}</li><br/>
                                 <li>4. {{recipe.step_4}}</li><br/>
                             </ul>
+                            </blockquote>
+
                         </span></div>
         </li>
     </ul>
-    {% else %}
-    <p>No recipes here yet! Come back later..</p>
-    {% endif %} {% endfor %}
+    {% else %} {% endif %} {% endfor %}
 </div>
 {% endblock %}
