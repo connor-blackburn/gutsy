@@ -9,40 +9,11 @@
         <li>
             <div class="collapsible-header">
                 <div class="card-action edit-buttons center-align">
-                    <a href="#" class="waves-effect waves-light btn-small green lighten-1">Edit</a>
+                    <a href="{{url_for('edit_recipe', recipe_id =recipe._id)}}" class="waves-effect waves-light btn-small green lighten-1">Edit</a>
                     <a href="{{url_for('delete_recipe', recipe_id =recipe._id)}}" class="waves-effect waves-light btn-small  red lighten-1">Delete</a>
                 </div>
                 {{recipe.cuisine_name}} - {{recipe.dish_name}} - {{recipe.dish_difficulty}}
             </div>
-            <div class="collapsible-body"><span>
-                              <h4>{{recipe.dish_name}}</4>
-                            <h5>Ingredients:</h5>
-                            <blockquote>
-                            <ul>
-                                <li>1. {{recipe.ingredient_1}}</li>
-                                <li>2. {{recipe.ingredient_2}}</li>
-                                <li>3. {{recipe.ingredient_3}}</li>
-                                <li>4. {{recipe.ingredient_4}}</li>
-                                <li>5. {{recipe.ingredient_5}}</li>
-                                <li>6. {{recipe.ingredient_6}}</li>
-                                <li>7. {{recipe.ingredient_7}}</li>
-                                <li>8. {{recipe.ingredient_8}}</li>
-                                <li>9. {{recipe.ingredient_9}}</li>
-                            </ul>
-                            </blockquote>
-                            <br/>
-                            <h5>Steps:</h5>
-                            <blockquote>
-
-                            <ul>
-                                <li>1. {{recipe.step_1}}</li><br/>
-                                <li>2. {{recipe.step_2}}</li><br/>
-                                <li>3. {{recipe.step_3}}</li><br/>
-                                <li>4. {{recipe.step_4}}</li><br/>
-                            </ul>
-                            </blockquote>
-
-                        </span></div>
         </li>
     </ul>
     {% else %} {% endif %} {% endfor %}
