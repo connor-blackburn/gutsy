@@ -98,6 +98,12 @@ def insert_recipe():
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for('create_recipe'))
 
+# This Page Allows A User To Complete A Form To Edit A Recipe
+@app.route('/edit_recipe')
+def edit_recipe():
+    return render_template('edit_recipe.html',
+    recipe=mongo.db.recipes.find())
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
         port=int(os.environ.get('PORT')),
