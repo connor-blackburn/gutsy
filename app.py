@@ -98,11 +98,21 @@ def insert_recipe():
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for('create_recipe'))
 
-# This Page Allows A User To Complete A Form To Edit A Recipe
-@app.route('/edit_recipe')
-def edit_recipe():
-    return render_template('edit_recipe.html',
-    recipe=mongo.db.recipes.find())
+# This Offers A User A Form With Dynamically Loaded Content To Edit
+@app.route('/edit_recipe/<recipe_id>')
+def edit_recipe(recipe_id):
+    recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    cuisine = mongo.db.cuisines.find()
+    return render_template('edit_recipe.html', recipe=recipes,
+    cuisines=cuisine)
+    
+# Confirms Recipe Change & Redirects Back To Get Recipe Step Two
+@app.route('/update_recipe/<recipe_id>', methods=['POST'])
+def update_recipe(recipe_id):
+    mongo.db.recipes.update(
+        {'_id': ObjectId(recipe_id)},
+        {'dish_name': request.form.get('dish_name')})
+    return redirect(url_for('get_recipes_step_two'))
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
