@@ -109,10 +109,30 @@ def edit_recipe(recipe_id):
 # Confirms Recipe Change & Redirects Back To Get Recipe Step Two
 @app.route('/update_recipe/<recipe_id>', methods=['POST'])
 def update_recipe(recipe_id):
-    mongo.db.recipes.update(
-        {'_id': ObjectId(recipe_id)},
-        {'dish_name': request.form.get('dish_name')})
-    return redirect(url_for('get_recipes_step_two'))
+    recipes = mongo.db.recipes
+    recipes.update({'_id': ObjectId(recipe_id)},
+        {
+            'cuisine_name':request.form.get('cuisine_name'),
+            'dish_name':request.form.get('dish_name'),
+            'dish_difficulty':request.form.get('dish_difficulty'),
+            'serves':request.form.get('serves'),
+            'ingredient_1':request.form.get('ingredient_1'),
+            'ingredient_2':request.form.get('ingredient_2'),
+            'ingredient_3':request.form.get('ingredient_3'),
+            'ingredient_4':request.form.get('ingredient_4'),
+            'ingredient_5':request.form.get('ingredient_5'),
+            'ingredient_6':request.form.get('ingredient_6'),
+            'ingredient_7':request.form.get('ingredient_7'),
+            'ingredient_8':request.form.get('ingredient_8'),
+            'ingredient_9':request.form.get('ingredient_9'),
+            'step_1':request.form.get('step_1'),
+            'step_2':request.form.get('step_2'),
+            'step_3':request.form.get('step_3'),
+            'step_4':request.form.get('step_4'), 
+            'step_5':request.form.get('step_5')
+
+        })
+    return redirect(url_for('home'))
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
