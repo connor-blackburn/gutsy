@@ -61,6 +61,7 @@ def delete_cuisine(cuisine_id):
 def recipe_display(cuisine_id):
     return render_template('recipe_display.html',
     recipes=mongo.db.recipes.find(),
+    difficulties=mongo.db.difficulties.find_one(),
     cuisines=mongo.db.cuisines.find_one({'_id': ObjectId(cuisine_id)}))
 
 # Displays Cuisines So Users Can Narrow Recipe Search Efficiently
@@ -89,7 +90,8 @@ def delete_recipe(recipe_id):
 def create_recipe():
     return render_template('create_recipe.html',
     recipes=mongo.db.recipes.find(),
-    cuisines=mongo.db.cuisines.find()) 
+    cuisines=mongo.db.cuisines.find(),
+    difficulties=mongo.db.difficulties.find()) 
 
 # This Allows The Form To Update Theh Database
 @app.route('/insert_recipe', methods=['POST'])
@@ -103,8 +105,9 @@ def insert_recipe():
 def edit_recipe(recipe_id):
     recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     cuisine = mongo.db.cuisines.find()
+    difficulty = mongo.db.difficulties.find()
     return render_template('edit_recipe.html', recipe=recipes,
-    cuisines=cuisine)
+    cuisines=cuisine, difficulties=difficulty)
     
 # Confirms Recipe Change & Redirects Back To Get Recipe Step Two
 @app.route('/update_recipe/<recipe_id>', methods=['POST'])
