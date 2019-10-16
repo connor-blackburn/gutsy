@@ -33,14 +33,14 @@
 
     <!-- A Dropdown Menu Giving A User The Current Selection And All Options To Choose From Regarding Dish Difficulty -->
     <h5>How Hard Is This Dish To Create?</h5>
-    <div class="row">
+    <div class="row form-group">
         <div class="input-field col s10">
             <i class="material-icons prefix">search</i>
-            <select id="difficulties" name="dish_difficulty">
+            <select id="dish_difficulty" name="dish_difficulty">
                 
                 {% for difficulties in difficulties %}"
-                    {% if recipe.dish_difficulty == difficulties.dish_difficulty %}
-                        <option value="{{recipe.dish_difficulty}}" selected >{{recipe.dish_difficulty}}</option>
+                    {% if difficulties.dish_difficulty == recipe.dish_difficulty %}
+                        <option value="{{difficulties.dish_difficulty}}" selected >{{difficulties.dish_difficulty}}</option>
                     {% else %}
                         <option value="{{difficulties.dish_difficulty}}">{{difficulties.dish_difficulty}}</option>
                     {% endif %}>

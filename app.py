@@ -105,14 +105,15 @@ def insert_recipe():
 def edit_recipe(recipe_id):
     recipes = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     cuisine = mongo.db.cuisines.find()
-    difficulty = mongo.db.difficulties.find()
+    difficulties = mongo.db.difficulties.find()
     return render_template('edit_recipe.html', recipe=recipes,
-    cuisines=cuisine, difficulties=difficulty)
+    cuisines=cuisine, difficulties=difficulties)
     
 # Confirms Recipe Change & Redirects Back To Get Recipe Step Two
 @app.route('/update_recipe/<recipe_id>', methods=['POST'])
 def update_recipe(recipe_id):
     recipes = mongo.db.recipes
+    print(request.form.get('dish_difficulty'))    
     recipes.update({'_id': ObjectId(recipe_id)},
         {
             'cuisine_name':request.form.get('cuisine_name'),
