@@ -29,14 +29,14 @@
                 <label>Cuisine List</label>
                 <p>Recipe cuisine not here? Create it at 'Cuisines' dropdown at the top of the page.</p>
             </div>
-    </div>
 
-    <!-- A Dropdown Menu Giving A User The Current Selection And All Options To Choose From Regarding Dish Difficulty -->
-    <h5>How Hard Is This Dish To Create?</h5>
-    <div class="row form-group">
-        <div class="input-field col s10">
-            <i class="material-icons prefix">search</i>
-            <select id="dish_difficulty" name="dish_difficulty">
+
+            <!-- A Dropdown Menu Giving A User The Current Selection And All Options To Choose From Regarding Dish Difficulty -->
+            <h5>How Hard Is This Dish To Create?</h5>
+            <div class="row">
+                <div class="input-field col s10">
+                    <i class="material-icons prefix">search</i>
+                    <select id="recipes" name="dish_difficulty">
                 
                 {% for difficulties in difficulties %}"
                     {% if difficulties.dish_difficulty == recipe.dish_difficulty %}
@@ -47,16 +47,17 @@
                 {% endfor %}
            
             </select>
-            <label>Dish Difficulty</label>
-        </div>
-    </div>
+                    <label>Dish Difficulty</label>
+                </div>
+            </div>
 
-    <!-- A Dropdown Menu Giving A User The Current Selection And All Options To Choose From Regarding How Many People This Dish Serves-->
-    <div class="row">
-        <h5>How Many Does This Dish Serve?</h5>
-        <div class="input-field col s10">
-            <i class="material-icons prefix">search</i>
-            <select id="recipes" name="serves">
+
+            <!-- A Dropdown Menu Giving A User The Current Selection And All Options To Choose From Regarding How Many People This Dish Serves-->
+            <div class="row">
+                <h5>How Many Does This Dish Serve?</h5>
+                <div class="input-field col s10">
+                    <i class="material-icons prefix">search</i>
+                    <select id="recipes" name="serves">
                 <option value="{{recipe.serves}}" disabled selected>{{recipe.serves}}</option>
                     <option>1</option>
                     <option>2</option>
@@ -70,108 +71,109 @@
                     <option>10</option>
 
             </select>
-            <label>Serves</label>
-        </div>
-    </div>
+                    <label>Serves</label>
+                </div>
+            </div>
 
-    <!-- A series Of Input Fields Of Ingredients With Dynamically Loaded Content To Be Edited -->
-    <div class="row">
-        <h5>Ingredients - If any fields are unnecessary, just leave blank</h5>
-        <div class="input-field col s6">
-            <i class="material-icons prefix">create</i>
-            <input id="icon_prefix" id="recipes" name="ingredient_1" type="text" value="{{recipe.ingredient_1}}" class="validate">
-            <label for="icon_prefix">Ingredient 1</label>
-        </div>
-        <div class="input-field col s6">
-            <i class="material-icons prefix">create</i>
-            <input id="icon_prefix" id="recipes" name="ingredient_2" type="text" value="{{recipe.ingredient_2}}" class="validate">
-            <label for="icon_prefix">Ingredient 2</label>
-        </div>
+            <!-- A series Of Input Fields Of Ingredients With Dynamically Loaded Content To Be Edited -->
+            <div class="row">
+                <h5>Ingredients - If any fields are unnecessary, just leave blank</h5>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">create</i>
+                    <input id="icon_prefix" id="recipes" name="ingredient_1" type="text" value="{{recipe.ingredient_1}}" class="validate">
+                    <label for="icon_prefix">Ingredient 1</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">create</i>
+                    <input id="icon_prefix" id="recipes" name="ingredient_2" type="text" value="{{recipe.ingredient_2}}" class="validate">
+                    <label for="icon_prefix">Ingredient 2</label>
+                </div>
 
-        <div class="input-field col s6">
-            <i class="material-icons prefix">create</i>
-            <input id="icon_prefix" id="recipes" name="ingredient_3" type="text" value="{{recipe.ingredient_3}}" class="validate">
-            <label for="icon_prefix">Ingredient 3</label>
-        </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">create</i>
+                    <input id="icon_prefix" id="recipes" name="ingredient_3" type="text" value="{{recipe.ingredient_3}}" class="validate">
+                    <label for="icon_prefix">Ingredient 3</label>
+                </div>
 
-        <div class="input-field col s6">
-            <i class="material-icons prefix">create</i>
-            <input id="icon_prefix" id="recipes" name="ingredient_4" type="text" value="{{recipe.ingredient_4}}" class="validate">
-            <label for="icon_prefix">Ingredient 4</label>
-        </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">create</i>
+                    <input id="icon_prefix" id="recipes" name="ingredient_4" type="text" value="{{recipe.ingredient_4}}" class="validate">
+                    <label for="icon_prefix">Ingredient 4</label>
+                </div>
 
-        <div class="input-field col s6">
-            <i class="material-icons prefix">create</i>
-            <input id="icon_prefix" id="recipes" name="ingredient_5" type="text" value="{{recipe.ingredient_5}}" class="validate">
-            <label for="icon_prefix">Ingredient 5</label>
-        </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">create</i>
+                    <input id="icon_prefix" id="recipes" name="ingredient_5" type="text" value="{{recipe.ingredient_5}}" class="validate">
+                    <label for="icon_prefix">Ingredient 5</label>
+                </div>
 
-        <div class="input-field col s6">
-            <i class="material-icons prefix">create</i>
-            <input id="icon_prefix" id="recipes" name="ingredient_6" type="text" value="{{recipe.ingredient_6}}" class="validate">
-            <label for="icon_prefix">Ingredient 6</label>
-        </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">create</i>
+                    <input id="icon_prefix" id="recipes" name="ingredient_6" type="text" value="{{recipe.ingredient_6}}" class="validate">
+                    <label for="icon_prefix">Ingredient 6</label>
+                </div>
 
-        <div class="input-field col s6">
-            <i class="material-icons prefix">create</i>
-            <input id="icon_prefix" id="recipes" name="ingredient_7" type="text" value="{{recipe.ingredient_7}}" class="validate">
-            <label for="icon_prefix">Ingredient 7</label>
-        </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">create</i>
+                    <input id="icon_prefix" id="recipes" name="ingredient_7" type="text" value="{{recipe.ingredient_7}}" class="validate">
+                    <label for="icon_prefix">Ingredient 7</label>
+                </div>
 
-        <div class="input-field col s6">
-            <i class="material-icons prefix">create</i>
-            <input id="icon_prefix" id="recipes" name="ingredient_8" type="text" value="{{recipe.ingredient_8}}" class="validate">
-            <label for="icon_prefix">Ingredient 8</label>
-        </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">create</i>
+                    <input id="icon_prefix" id="recipes" name="ingredient_8" type="text" value="{{recipe.ingredient_8}}" class="validate">
+                    <label for="icon_prefix">Ingredient 8</label>
+                </div>
 
-        <div class="input-field col s6">
-            <i class="material-icons prefix">create</i>
-            <input id="icon_prefix" id="recipes" name="ingredient_9" type="text" value="{{recipe.ingredient_9}}" class="validate">
-            <label for="icon_prefix">Ingredient 9</label>
-        </div>
-    </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">create</i>
+                    <input id="icon_prefix" id="recipes" name="ingredient_9" type="text" value="{{recipe.ingredient_9}}" class="validate">
+                    <label for="icon_prefix">Ingredient 9</label>
+                </div>
+            </div>
 
-    <!-- A series Of Input Fields Of Steps With Dynamically Loaded Content To Be Edited -->
-    <div class="row">
-        <h5>Steps - If any fields are unnecessary, just leave blank </h5>
-        <div class="input-field col s6">
-            <i class="material-icons prefix">create</i>
-            <input id="icon_prefix" id="recipes" name="step_1" value="{{recipe.step_1}}" type="text" class="validate">
-            <label for="icon_prefix">Step 1</label>
-        </div>
-        <div class="input-field col s6">
-            <i class="material-icons prefix">create</i>
-            <input id="icon_prefix" id="recipes" name="step_2" type="text" value="{{recipe.step_2}}" class="validate">
-            <label for="icon_prefix">Step 2</label>
-        </div>
-        <div class="input-field col s6">
-            <i class="material-icons prefix">create</i>
-            <input id="icon_prefix" id="recipes" name="step_3" type="text" value="{{recipe.step_3}}" class="validate">
-            <label for="icon_prefix">Step 3</label>
-        </div>
-        <div class="input-field col s6">
-            <i class="material-icons prefix">create</i>
-            <input id="icon_prefix" id="recipes" name="step_4" type="text" value="{{recipe.step_4}}" class="validate">
-            <label for="icon_prefix">Step 4</label>
-        </div>
-        <div class="input-field col s6">
-            <i class="material-icons prefix">create</i>
-            <input id="icon_prefix" id="recipes" name="step_5" type="text" value="{{recipe.step_5}}" class="validate">
-            <label for="icon_prefix">Step 5</label>
-        </div>
-        <div class="input-field col s6">
-            <i class="material-icons prefix">create</i>
-            <input id="icon_prefix" id="recipes" name="step_6" type="text" value="{{recipe.step_6}}" class="validate">
-            <label for="icon_prefix">Step 6</label>
-        </div>
-    </div>
+            <!-- A series Of Input Fields Of Steps With Dynamically Loaded Content To Be Edited -->
+            <div class="row">
+                <h5>Steps - If any fields are unnecessary, just leave blank </h5>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">create</i>
+                    <input id="icon_prefix" id="recipes" name="step_1" value="{{recipe.step_1}}" type="text" class="validate">
+                    <label for="icon_prefix">Step 1</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">create</i>
+                    <input id="icon_prefix" id="recipes" name="step_2" type="text" value="{{recipe.step_2}}" class="validate">
+                    <label for="icon_prefix">Step 2</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">create</i>
+                    <input id="icon_prefix" id="recipes" name="step_3" type="text" value="{{recipe.step_3}}" class="validate">
+                    <label for="icon_prefix">Step 3</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">create</i>
+                    <input id="icon_prefix" id="recipes" name="step_4" type="text" value="{{recipe.step_4}}" class="validate">
+                    <label for="icon_prefix">Step 4</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">create</i>
+                    <input id="icon_prefix" id="recipes" name="step_5" type="text" value="{{recipe.step_5}}" class="validate">
+                    <label for="icon_prefix">Step 5</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">create</i>
+                    <input id="icon_prefix" id="recipes" name="step_6" type="text" value="{{recipe.step_6}}" class="validate">
+                    <label for="icon_prefix">Step 6</label>
+                </div>
+            </div>
 
 
-    <button class="btn waves-effect waves-light" type="submit" name="action">Submit Changes
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit Changes
                 <i class="material-icons right">send</i>
             </button>
 
-    </form>
+        </form>
+    </div>
 </div>
 </div>
 
