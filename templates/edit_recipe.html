@@ -54,22 +54,15 @@
 
             <!-- A Dropdown Menu Giving A User The Current Selection And All Options To Choose From Regarding How Many People This Dish Serves-->
             <div class="row">
-                <h5>How Many Does This Dish Serve?</h5>
+                <h5>How Many People Does This Dish Serve?</h5>
                 <div class="input-field col s10">
                     <i class="material-icons prefix">search</i>
                     <select id="recipes" name="serves">
-                <option value="{{recipe.serves}}" disabled selected>{{recipe.serves}}</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-
+                
+                {% for serves in serves %}"
+                        <option value="{{serves.serves}}" {% if serves.serves == recipe.serves %}selected{% endif %}>{{serves.serves}}</option>
+                {% endfor %}
+                        
             </select>
                     <label>Serves</label>
                 </div>
