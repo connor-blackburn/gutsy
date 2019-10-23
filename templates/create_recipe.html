@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="row description container">
-    <h3>Create / Add Recipe</h3>
+    <h2>Welcome to the Create Recipe Page!</h2>
     <p>Please complete the short form below to add your desired recipe to the cookbook.</p>
 </div>
 
@@ -9,15 +9,16 @@
 
     <!-- A single input field creating the new recipe dish name -->
     <div class="row">
+        <h5>What Is The Dish Name?</h5>
         <div class="input-field col s6">
             <i class="material-icons prefix">create</i>
             <input id="icon_prefix" type="text" id="recipes" name="dish_name" class="validate">
-            <label for="icon_prefix" id="recipes" name="dish_name">Dish Name</label>
-            <p>Please enter your dish name e.g. Shepherds Pie</p>
+            <label for="icon_prefix" id="recipes" name="dish_name">Dish Name e.g. Shepherds Pie</label>
         </div>
     </div>
     <!-- A Dropdown Menu For User To Select Recipe Cuisine -->
     <div class="row">
+        <h5>What Is Your Dish Cuisine?</h5>
         <div class="input-field col s10">
             <i class="material-icons prefix">search</i>
             <select id="recipes" name="cuisine_name">
@@ -32,6 +33,7 @@
     </div>
     <!-- A Dropdown Menu For A User To Select Recipe Difficulty -->
     <div class="row">
+        <h5>How Hard Is This Dish To Create?</h5>
         <div class="input-field col s10">
             <i class="material-icons prefix">search</i>
             <select id="recipes" name="dish_difficulty">
@@ -45,6 +47,7 @@
     </div>
     <!-- A Dropdown Menu For A User To Select How Many People The Recipe Will Serve -->
     <div class="row">
+        <h5>How Many People Does This Dish Serve?</h5>
         <div class="input-field col s10">
             <i class="material-icons prefix">search</i>
             <select id="recipes" name="serves">
@@ -58,7 +61,7 @@
     </div>
     <!-- A Series Of Input Fields For A User To Input All Required Ingredients -->
     <div class="row">
-        <h5>Ingredients - If any fields are unnecessary, just leave blank</h5>
+        <h5>Ingredients - If any fields are unnecessary, just leave blank (9 max)</h5>
         <div class="input-field col s6">
             <i class="material-icons prefix">create</i>
             <input id="icon_prefix" id="recipes" name="ingredient_1" type="text" class="validate">
@@ -114,7 +117,7 @@
     </div>
     <!-- A Series Of Input Fields For A User To Input All Required Steps To Create Recipe -->
     <div class="row">
-        <h5>Steps - If any fields are unnecessary, just leave blank </h5>
+        <h5>Steps - If any fields are unnecessary, just leave blank (6 max)</h5>
         <div class="input-field col s6">
             <i class="material-icons prefix">create</i>
             <input id="icon_prefix" id="recipes" name="step_1" type="text" class="validate">

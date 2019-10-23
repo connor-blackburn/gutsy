@@ -6,11 +6,11 @@
     {% for recipe in recipes %} {% if cuisines.cuisine_name == recipe.cuisine_name %} {{recipe.dish_name}}
     <ul class="collapsible popout">
         <li>
-            <div class="collapsible-header"><i class="material-icons">restaurant_menu</i> <u>{{recipe.dish_name}}</u> - {{difficulties.dish_difficulty}} - {{recipe.cuisine_name}}</div>
+            <div class="collapsible-header"><i class="material-icons">restaurant_menu</i> <u>{{recipe.dish_name}}</u> - {{recipe.dish_difficulty}} - {{recipe.cuisine_name}}</div>
             <div class="collapsible-body"><span>
                                 <h4>{{recipe.dish_name}}</4>
                                 <h6>This Dish Will Serve: {{recipe.serves}} Person(s).</h6>
-                                <h6>This Dish Difficulty is:  </h6>
+                                <h6>This Dish Difficulty is: {{recipe.dish_difficulty}} </h6>
                             <h5>Ingredients:</h5>
                             <blockquote>
                             <ul>

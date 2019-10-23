@@ -2,7 +2,8 @@
 
 <div class="container">
     <div class="row">
-        <h2>Welcome to the edit recipe page</h2>
+        <h2>Welcome to the edit recipe page!</h2>
+        <p>Please complete the short form below to complete your edits and submit them to the cookbook. </p>
     </div>
 
     <div class="row">
@@ -12,28 +13,31 @@
             <div class="row">
                 <h5>What Is The Dish Name?</h5>
                 <div class="input-field col s6">
-                    <i class="material-icons prefix">poll</i>
+                    <i class="material-icons prefix">create</i>
                     <input id="recipes" name="dish_name" type="text" class="validate" value="{{recipe.dish_name}}">
-                    <label for="dish_name">Dish Name</label>
+                    <label for="dish_name">Dish Name e.g. Shepherds Pie</label>
                 </div>
             </div>
 
             <!-- A Dropdown Menu Giving A User The Current Selection And All Options To Choose From Regarding Dish Cuisine -->
             <div class="row">
                 <h5>What Is Your Dish Cuisine?</h5>
-                <select id="recipes" name="cuisine_name">
-                    {% for cuisine in cuisines %}
-                          <option value="{{cuisine.cuisine_name}}" {% if cuisine.cuisine_name == recipe.cuisine_name %}selected{% endif %}>{{cuisine.cuisine_name}}</option>
-                    {% endfor %}
-                </select>
-                <label>Cuisine List</label>
-                <p>Recipe cuisine not here? Create it at 'Cuisines' dropdown at the top of the page.</p>
+                <div class="input-field col s10">
+                    <i class="material-icons prefix">search</i>
+                    <select id="recipes" name="cuisine_name">
+                        {% for cuisine in cuisines %}
+                        <option value="{{cuisine.cuisine_name}}" {% if cuisine.cuisine_name == recipe.cuisine_name %}selected{% endif %}>{{cuisine.cuisine_name}}</option>
+                        {% endfor %}
+                    </select>
+                    <label>Cuisine List</label>
+                    <p>Recipe cuisine not here? Create it at 'Cuisines' dropdown at the top of the page.</p>
+                </div>
             </div>
 
 
             <!-- A Dropdown Menu Giving A User The Current Selection And All Options To Choose From Regarding Dish Difficulty -->
-            <h5>How Hard Is This Dish To Create?</h5>
             <div class="row">
+                <h5>How Hard Is This Dish To Create?</h5>
                 <div class="input-field col s10">
                     <i class="material-icons prefix">search</i>
                     <select id="recipes" name="dish_difficulty">
@@ -70,7 +74,7 @@
 
             <!-- A series Of Input Fields Of Ingredients With Dynamically Loaded Content To Be Edited -->
             <div class="row">
-                <h5>Ingredients - If any fields are unnecessary, just leave blank</h5>
+                <h5>Ingredients - If any fields are unnecessary, just leave blank (9 max)</h5>
                 <div class="input-field col s6">
                     <i class="material-icons prefix">create</i>
                     <input id="icon_prefix" id="recipes" name="ingredient_1" type="text" value="{{recipe.ingredient_1}}" class="validate">
@@ -127,7 +131,7 @@
 
             <!-- A series Of Input Fields Of Steps With Dynamically Loaded Content To Be Edited -->
             <div class="row">
-                <h5>Steps - If any fields are unnecessary, just leave blank </h5>
+                <h5>Steps - If any fields are unnecessary, just leave blank (6 max)</h5>
                 <div class="input-field col s6">
                     <i class="material-icons prefix">create</i>
                     <input id="icon_prefix" id="recipes" name="step_1" value="{{recipe.step_1}}" type="text" class="validate">
