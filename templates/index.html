@@ -1,21 +1,18 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container">
-    <div class="row heading">
-        <h1>Gutsy</h1>
+    <div class="row center-align heading">
+        <h1>Welcome To Gutsy</h1>
         <h5>An online cookbook made by the community <br/> <u>FOR</u> the community!</h5>
         <div class="hero_image">
-            <img src="static/images/chefs.png" height="475" width="950">
+            <img src="static/images/chefs.png">
         </div>
-    </div>
-
-    <div class="row center-align">
         <a class="btn-floating btn-large waves-effect waves-light blue lighten-1 pulse" href="#cuisine_section"><i class="material-icons">expand_more</i></a>
     </div>
 
-    <div id="cuisine_section" class="row cuisine_selection">
-        <h1>Welcome to the Cuisine section</h1>
-        <h4>Choose the cuisine you want to view recipes!</h4>
-        
+    <div id="cuisine_section" class="row heading center-align">
+        <h1>Cuisine section</h1>
+        <h5>Please select the cuisine you want to view recipes within!</h5>
+
         {% for cuisine in cuisines %}
         <div class="col s12 m4 cardBox">
             <div class="card blue lighten-5 z-depth-2">
@@ -28,6 +25,6 @@
             </div>
         </div>
         {% endfor %}
-        
     </div>
-    {% endblock %}
+</div>
+{% endblock %}
