@@ -2,6 +2,8 @@
 @import "static/partials/universal.scss";
 @import "static/partials/typography.scss";
 @import "static/partials/images.scss";
+@import "static/partials/positioning.scss";
+
 
 // Universal styling
 
@@ -16,5 +18,13 @@ body {
 }
 
 .hero_image img {
-    @include imageSizing
+    @include imageSizing;
+}
+
+.flexContainer {
+    @include flexContainer;
+}
+
+.heading {
+    @include headings;
 }

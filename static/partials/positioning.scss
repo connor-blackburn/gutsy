@@ -1,0 +1,8 @@
+// attributes for item positioning 
+
+@mixin flexContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}

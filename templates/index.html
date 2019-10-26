@@ -1,20 +1,28 @@
 {% extends 'base.html' %} {% block content %}
+
 <div class="container">
-    <div class="row center-align heading">
-        <h1>Welcome To Gutsy</h1>
-        <h5>An online cookbook made by the community <br/> <u>FOR</u> the community!</h5>
+    <!-- welcome message, graphic and pulsing button -->
+    <div class="row center-align">
+        <div class="heading">
+            <h1>Welcome To Gutsy</h1>
+            <h5>An online cookbook made by the community <br/> <u>FOR</u> the community!</h5>
+        </div>
         <div class="hero_image">
             <img src="static/images/chefs.png">
         </div>
-        <a class="btn-floating btn-large waves-effect waves-light blue lighten-1 pulse" href="#cuisine_section"><i class="material-icons">expand_more</i></a>
+        <div class="button">
+            <a class="btn-floating btn-large waves-effect waves-light blue lighten-1 pulse" href="#cuisine_section"><i class="material-icons">expand_more</i></a>
+        </div>
     </div>
-
-    <div id="cuisine_section" class="row heading center-align">
-        <h1>Cuisine section</h1>
-        <h5>Please select the cuisine you want to view recipes within!</h5>
-
+    <!-- // -->
+    <!-- cuisine selection area -->
+    <div id="cuisine_section" class="row flexContainer center-align">
+        <div class="heading">
+            <h1>Cuisine section</h1>
+            <h5>Please select the cuisine you want to view recipes within!</h5>
+        </div>
         {% for cuisine in cuisines %}
-        <div class="col s12 m4 cardBox">
+        <div class="col s12 m4 cardBox flexItem">
             <div class="card blue lighten-5 z-depth-2">
                 <div class="card-content white-text">
                     <span class="card-title black-text center-align">{{cuisine.cuisine_name}}</span>
