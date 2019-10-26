@@ -1,0 +1,7 @@
+// styling which will apply to the project as a whole and will remain consistent throughout
+
+@mixin universalStyling {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
