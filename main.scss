@@ -1,5 +1,18 @@
 @import "static/partials/universal.scss";
+@import "static/partials/typography.scss";
+@import "static/partials/images.scss";
+
 
 body {
     @include universalStyling;
+    @include primaryFontFamilty;
+    @include backgroundImage;
+}
+
+.row {
+    @include rowStyling;
+}
+
+.hero_image img {
+    @include imageSizing
 }
