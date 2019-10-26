@@ -1,7 +1,9 @@
+// Importing of partials 
 @import "static/partials/universal.scss";
 @import "static/partials/typography.scss";
 @import "static/partials/images.scss";
 
+// Universal styling
 
 body {
     @include universalStyling;
