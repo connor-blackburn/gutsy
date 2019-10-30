@@ -1,11 +1,17 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="container">
-    <div class="row">
-        <h2>Welcome to the edit recipe page!</h2>
-        <p>Please complete the short form below to complete your edits and submit them to the cookbook. </p>
-    </div>
 
+    <!-- Welcome message and short instruction -->
+    <div class="row">
+        <div class="heading">
+            <h1>Welcome to the {{recipe.dish_name}} edit page!</h1>
+            <h6>Please complete the short form below to complete your edits and submit them to the cookbook. </h6>
+        </div>
+    </div>
+    <!-- // -->
+
+    <!-- form allowing a user to edit an existing recipe with pre-loaded form fields -->
     <div class="row">
         <form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12 container">
 
@@ -171,7 +177,8 @@
 
         </form>
     </div>
+    <!-- // -->
 </div>
-</div>
+
 
 {% endblock %}

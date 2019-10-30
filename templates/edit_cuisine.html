@@ -1,10 +1,17 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="container">
-    <div class="row">
-        <h2>Welcome to the edit cuisine page</h2>
-    </div>
 
+    <!-- Welcome Message and short instruction -->
+    <div class="row">
+        <div class="heading">
+            <h1>Welcome to the {{cuisines.cuisine_name}} cuisine edit page</h1>
+            <h6>Please complete the short form below if you wish to modify the current cuisine.</h6>
+        </div>
+    </div>
+    <!-- // -->
+
+    <!-- form which allows a user to edit a chosen cuisine name -->
     <div class="row">
         <form action="{{ url_for('update_cuisine', cuisine_id=cuisines._id) }}" method="POST" class="col s12 container">
             <div class="row">
@@ -20,5 +27,6 @@
             </button>
         </form>
     </div>
+    <!-- // -->
 </div>
 {% endblock %}

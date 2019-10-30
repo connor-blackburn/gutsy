@@ -1,20 +1,32 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Lets find the recipe you want to edit!</h1>
-<h5>Please select the cuisine which your recipe will be in.</h5>
+<div class="container">
 
-
-<div class="row cuisine_selection">
-    {% for cuisine in cuisines %}
-    <div class="col s12 m4 cardBox">
-        <div class="card blue lighten-5 z-depth-2">
-            <div class="card-content white-text">
-                <span class="card-title black-text center-align">{{cuisine.cuisine_name}}</span>
-            </div>
-            <div class="card-action center-align">
-                <a href="{{url_for('get_recipes_step_two', cuisine_id=cuisine._id)}}" class="waves-effect waves-light btn-small green lighten-1">Edit A {{cuisine.cuisine_name}} Recipe!</a>
-            </div>
+    <!-- Welcome message and short instruction -->
+    <div class="row">
+        <div class="heading">
+            <h1>Lets find the recipe you want to edit!</h1>
+            <h6>Please select the cuisine which your recipe will be in.</h6>
         </div>
     </div>
-    {% endfor %}
-</div> {% endblock %}
+    <!-- // -->
+    
+    <!-- cuisine selection area -->
+    <div class="row">
+        {% for cuisine in cuisines %}
+        <div class="col s12 m4 cardBox">
+            <div class="card blue lighten-5 z-depth-2">
+                <div class="card-content white-text">
+                    <span class="card-title black-text center-align">{{cuisine.cuisine_name}}</span>
+                </div>
+                <div class="card-action center-align">
+                    <a href="{{url_for('get_recipes_step_two', cuisine_id=cuisine._id)}}" class="waves-effect waves-light btn-small green lighten-1">Edit A {{cuisine.cuisine_name}} Recipe!</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- // -->
+    
+</div>
+{% endblock %}

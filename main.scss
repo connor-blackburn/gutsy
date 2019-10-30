@@ -13,6 +13,10 @@ body {
     @include backgroundImage;
 }
 
+.container {
+    @include containers;
+}
+
 .row {
     @include rowStyling;
 }
@@ -28,3 +32,4 @@ body {
 .heading {
     @include headings;
 }
+

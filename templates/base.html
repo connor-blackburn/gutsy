@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-
+    
+<!-- head section-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +11,10 @@
     <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" type="text/css" />
 </head>
+<!-- // -->
 
 <body>
+    <!-- responsive navigation bar, design aided with materialize and redirecting correctly due to flask routes using 'url_for' -->
     <header>
         <ul id="dropdown1" class="dropdown-content">
             <li><a href="{{url_for('get_recipes_step_one')}}">Edit Recipes</a></li>
@@ -50,7 +53,9 @@
         </ul>
     </header>
     {% block content %} {% endblock %}
-
+    <!-- // -->
+    
+    <!-- jQuery and Javascript section aiding materialize features -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript">
@@ -63,6 +68,7 @@
             //$('body').fadeIn(1800);
         });
     </script>
+    <!-- // -->
 
 
 </body>

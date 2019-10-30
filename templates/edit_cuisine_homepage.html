@@ -1,10 +1,17 @@
 {% extends 'base.html' %} {% block content %}
+
 <div class="container">
+
+    <!-- Welcome message and short instruction -->
     <div class="row">
-        <blockquote>
-            <h2>Welcome To The Cuisines Page!</h2>
-        </blockquote>
+        <div class="heading">
+            <h1>Welcome To The Cuisines Page!</h1>
+            <h6>Please select desired button to modify your relevant cuisine.</h6>
+        </div>
     </div>
+    <!-- // -->
+
+    <!-- cuisine list display, offering users delete and edit buttons -->
     <div class="row">
         {% for cuisine in cuisines %}
         <div class="col s12 m4">
@@ -20,4 +27,6 @@
         </div>
         {% endfor %}
     </div>
-    {% endblock %}
+    <!-- // -->
+</div>
+{% endblock %}
