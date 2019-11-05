@@ -9,7 +9,8 @@ body {
   padding: 5px; }
 
 .row {
-  padding: 5px; }
+  padding: 5px;
+  width: 90%; }
 
 .hero_image img {
   max-width: 100%;
@@ -23,5 +24,17 @@ body {
 
 .heading {
   width: 100%; }
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 3em; } }
+
+@media (max-width: 320px) {
+  h5 {
+    font-size: 1.5em; } }
+
+@media (max-width: 320px) {
+  .button {
+    margin: 10%; } }
 
 /*# sourceMappingURL=main.css.map */

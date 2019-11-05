@@ -7,7 +7,6 @@
 
 
 // Universal styling
-
 body {
     @include universalStyling;
     @include primaryFontFamilty;
@@ -34,3 +33,28 @@ body {
     @include headings;
 }
 
+// Media queries styling
+h1 {
+    @include smartphone {
+        font-size: 3em;
+    }
+    @include smartphoneMedium {}
+    @include smartphoneLarge {}
+    @include tablet {}
+}
+
+// Media queries styling
+h5 {
+    @include smartphone {
+        font-size: 1.5em;
+    }
+    @include smartphoneMedium {}
+    @include smartphoneLarge {}
+    @include tablet {}
+}
+
+.button {
+    @include smartphone {
+        margin: 10%;
+    }
+}
