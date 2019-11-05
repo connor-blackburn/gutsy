@@ -12,7 +12,7 @@
 
     <!-- recipe display -->
     <div class="row">
-        {% for recipe in recipes %} {% if cuisines.cuisine_name == recipe.cuisine_name %} {{recipe.dish_name}}
+        {% for recipe in recipes %} {% if cuisines.cuisine_name == recipe.cuisine_name %} <span class="hide-on-small-only">{{recipe.dish_name}}</span>
         <ul class="collapsible popout">
             <li>
                 <div class="collapsible-header"><i class="material-icons">restaurant_menu</i> <u>{{recipe.dish_name}}</u> <span class="hide-on-small-only">- {{recipe.dish_difficulty}} - {{recipe.cuisine_name}}</span></div>
