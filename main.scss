@@ -58,3 +58,9 @@ h5 {
         margin: 10%;
     }
 }
+
+.edit_recipe {
+    @include smartphone {
+        font-size: 80%;
+    }
+}
