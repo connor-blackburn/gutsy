@@ -5,7 +5,7 @@
     <!-- Welcome Message and short instruction -->
     <div class="row">
         <div class="heading">
-            <h1>Welcome to the {{cuisines.cuisine_name}} cuisine edit page</h1>
+            <h1>{{cuisines.cuisine_name}} cuisine edit page</h1>
             <h6>Please complete the short form below if you wish to modify the current cuisine.</h6>
         </div>
     </div>
@@ -15,7 +15,7 @@
     <div class="row">
         <form action="{{ url_for('update_cuisine', cuisine_id=cuisines._id) }}" method="POST" class="col s12 container">
             <div class="row">
-                <div class="input-field col s6">
+                <div class="input-field col s12">
                     <i class="material-icons prefix">poll</i>
                     <input id="cuisine_name" name="cuisine_name" type="text" class="validate" value="{{cuisines.cuisine_name}}">
                     <label for="cuisine_name">Cuisine Name</label>
