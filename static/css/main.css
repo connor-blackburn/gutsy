@@ -41,4 +41,8 @@ body {
   .edit_recipe {
     font-size: 80%; } }
 
+@media (max-width: 320px) {
+  .create_recipe {
+    font-size: 80%; } }
+
 /*# sourceMappingURL=main.css.map */

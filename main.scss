@@ -64,3 +64,9 @@ h5 {
         font-size: 80%;
     }
 }
+
+.create_recipe {
+    @include smartphone {
+        font-size: 80%;
+    }
+}
