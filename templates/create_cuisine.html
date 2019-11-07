@@ -5,7 +5,7 @@
     <!-- Heading message and instructions -->
     <div class="row">
         <div class="heading">
-            <h1>Create / Add Cuisine</h1>
+            <h1>Create Cuisine Page!</h1>
             <h6>Please complete the short form below to add your desired cuisine to the cookbook.</h6>
             <h6>Only add a new cuisine if it is not already within the cookbook.</h6>
             <h6>To view this, please view the 'List Of Current Cuisines' below.</h6>
@@ -16,7 +16,7 @@
     <!-- form allowing user to create a cuisine -->
     <div class="row">
         <form action="{{ url_for('insert_cuisine') }}" method="POST" class="col s12 container">
-            <div class="input-field col s10">
+            <div class="input-field col s12">
                 <i class="material-icons prefix">search</i>
                 <select id="cuisines" name="cuisine_name">
                 <option value="" disabled selected>View List</option>
@@ -28,10 +28,10 @@
             </div>
 
             <div class="row">
-                <div class="input-field col s10">
+                <div class="input-field col s12">
                     <i class="material-icons prefix">mode_edit</i>
                     <textarea name="cuisine_name" id="cuisine_name" class="materialize-textarea" required></textarea>
-                    <label for="icon_prefix2">Enter New Cuisine eg. 'Italian' or 'Indian'</label>
+                    <label for="icon_prefix2">Enter Cuisine</label>
                 </div>
             </div>
 
