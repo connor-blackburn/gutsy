@@ -85,6 +85,9 @@ h5 {
     @include smartphone {
         font-size: 1em;
     }
+    @include smartphoneMedium {
+        font-size: 0.7em;
+    }
 }
 
 .recipe_display {

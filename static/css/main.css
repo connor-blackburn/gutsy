@@ -60,6 +60,9 @@ body {
 @media (max-width: 320px) {
   .create_recipe {
     font-size: 1em; } }
+@media (min-width: 321px) and (max-width: 375px) {
+  .create_recipe {
+    font-size: 0.7em; } }
 
 @media (min-width: 321px) and (max-width: 375px) {
   .recipe_display {
