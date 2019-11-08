@@ -19,14 +19,14 @@
             <h5>What Is The Dish Name?</h5>
             <div class="input-field col s12">
                 <i class="material-icons prefix">create</i>
-                <input id="icon_prefix" type="text" id="recipes" name="dish_name" class="validate">
+                <input id="icon_prefix" type="text" id="recipes" name="dish_name" class="validate" required>
                 <label for="icon_prefix" id="recipes" name="dish_name">Dish Name <span class="hide-on-small-only">e.g. Shepherds Pie</label></span>
             </div>
             <!-- A Dropdown Menu For User To Select Recipe Cuisine -->
             <h5>What Is Your Dish Cuisine?</h5>
             <div class="input-field col s12">
                 <i class="material-icons prefix">search</i>
-                <select id="recipes" name="cuisine_name">
+                <select id="recipes" name="cuisine_name" required>
                 <option value="" disabled selected>Dish Cuisine</option>
                 {% for cuisine in cuisines %}
                     <option value="{{cuisine.cuisine_name}}">{{cuisine.cuisine_name}}</option>
@@ -39,7 +39,7 @@
             <h5>How Hard Is This Dish To Create?</h5>
             <div class="input-field col s12">
                 <i class="material-icons prefix">search</i>
-                <select id="recipes" name="dish_difficulty">
+                <select id="recipes" name="dish_difficulty" required>
                 <option value="" disabled selected>Dish Difficulty</option>
                 {% for difficulties in difficulties%}
                     <option value="{{difficulties.dish_difficulty}}">{{difficulties.dish_difficulty}}</option>
@@ -51,7 +51,7 @@
             <h5>How Many People Does This Dish Serve?</h5>
             <div class="input-field col s12">
                 <i class="material-icons prefix">search</i>
-                <select id="recipes" name="serves">
+                <select id="recipes" name="serves" required>
                 <option value="" disabled selected>People Dish Serves?</option>
                 {% for serves in serves %}
                     <option value="{{serves.serves}}">{{serves.serves}}</option>

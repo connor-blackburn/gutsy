@@ -19,7 +19,7 @@
             <h5>What Is The Dish Name?</h5>
             <div class="input-field col s12">
                 <i class="material-icons prefix">create</i>
-                <input id="recipes" name="dish_name" type="text" class="validate" value="{{recipe.dish_name}}">
+                <input id="recipes" name="dish_name" type="text" class="validate" value="{{recipe.dish_name}} required">
                 <label for="dish_name">Dish Name <span class="hide-on-small-only">e.g. Shepherds Pie</span></label>
             </div>
             <!-- // -->
@@ -28,7 +28,7 @@
             <h5>What Is Your Dish Cuisine?</h5>
             <div class="input-field col s12">
                 <i class="material-icons prefix">search</i>
-                <select id="recipes" name="cuisine_name">
+                <select id="recipes" name="cuisine_name" required>
                         {% for cuisine in cuisines %}
                         <option value="{{cuisine.cuisine_name}}" {% if cuisine.cuisine_name == recipe.cuisine_name %}selected{% endif %}>{{cuisine.cuisine_name}}</option>
                         {% endfor %}
@@ -42,7 +42,7 @@
             <h5>How Hard Is This Dish To Create?</h5>
             <div class="input-field col s12">
                 <i class="material-icons prefix">search</i>
-                <select id="recipes" name="dish_difficulty">
+                <select id="recipes" name="dish_difficulty" required>
                 {% for difficulties in difficulties %}"
                     {% if difficulties.dish_difficulty == recipe.dish_difficulty %}
                         <option value="{{difficulties.dish_difficulty}}" selected >{{difficulties.dish_difficulty}}</option>
@@ -59,7 +59,7 @@
             <h5>How Many People Does This Dish Serve?</h5>
             <div class="input-field col s12">
                 <i class="material-icons prefix">search</i>
-                <select id="recipes" name="serves">
+                <select id="recipes" name="serves" required>
                 
                 {% for serves in serves %}"
                         <option value="{{serves.serves}}" {% if serves.serves == recipe.serves %}selected{% endif %}>{{serves.serves}}</option>
