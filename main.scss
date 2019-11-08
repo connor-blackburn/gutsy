@@ -114,6 +114,13 @@ h5 {
     }
 }
 
+.edit_cuisine {
+    @include smartphoneMedium {
+        font-size: 0.7em;
+    }
+}
+
+
 
 
 
