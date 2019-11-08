@@ -150,10 +150,16 @@ span {
     @include smartphoneLarge {
         font-size: 0.9em;
     }
+    @include tablet {
+        font-size: 1.2em;
+    }
 }
 
 .get_recipes_step_two h1 {
     @include smartphoneLarge {
+        font-size: 3.5em;
+    }
+    @include tablet {
         font-size: 3.5em;
     }
 }

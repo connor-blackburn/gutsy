@@ -121,8 +121,14 @@ body {
 @media (min-width: 376px) and (max-width: 425px) {
   .get_recipes_step_two {
     font-size: 0.9em; } }
+@media (min-width: 426px) and (max-width: 768px) {
+  .get_recipes_step_two {
+    font-size: 1.2em; } }
 
 @media (min-width: 376px) and (max-width: 425px) {
+  .get_recipes_step_two h1 {
+    font-size: 3.5em; } }
+@media (min-width: 426px) and (max-width: 768px) {
   .get_recipes_step_two h1 {
     font-size: 3.5em; } }
 
