@@ -43,18 +43,22 @@ h1 {
     @include tablet {}
 }
 
-// Media queries styling
 h5 {
     @include smartphone {
         font-size: 1.5em;
     }
-    @include smartphoneMedium {}
+    @include smartphoneMedium {
+        font-size: 2.2em;
+    }
     @include smartphoneLarge {}
     @include tablet {}
 }
 
 .button {
     @include smartphone {
+        margin: 10%;
+    }
+    @include smartphoneMedium {
         margin: 10%;
     }
 }
@@ -70,3 +74,4 @@ h5 {
         font-size: 80%;
     }
 }
+

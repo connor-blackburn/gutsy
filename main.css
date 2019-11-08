@@ -32,8 +32,14 @@ body {
 @media (max-width: 320px) {
   h5 {
     font-size: 1.5em; } }
+@media (min-width: 321px) and (max-width: 375px) {
+  h5 {
+    font-size: 2.2em; } }
 
 @media (max-width: 320px) {
+  .button {
+    margin: 10%; } }
+@media (min-width: 321px) and (max-width: 375px) {
   .button {
     margin: 10%; } }
 
