@@ -90,6 +90,9 @@ body {
 @media (min-width: 376px) and (max-width: 425px) {
   .edit_recipe {
     font-size: 0.7em; } }
+@media (min-width: 426px) and (max-width: 768px) {
+  .edit_recipe {
+    font-size: 0.7em; } }
 
 @media (max-width: 320px) {
   .create_recipe {
@@ -98,6 +101,9 @@ body {
   .create_recipe {
     font-size: 0.7em; } }
 @media (min-width: 376px) and (max-width: 425px) {
+  .create_recipe {
+    font-size: 0.7em; } }
+@media (min-width: 426px) and (max-width: 768px) {
   .create_recipe {
     font-size: 0.7em; } }
 
