@@ -84,4 +84,8 @@ body {
   .edit_cuisine {
     font-size: 0.7em; } }
 
+@media (min-width: 321px) and (max-width: 375px) {
+  .create_cuisine {
+    font-size: 0.7em; } }
+
 /*# sourceMappingURL=main.css.map */
