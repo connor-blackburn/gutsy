@@ -33,6 +33,7 @@ body {
     @include headings;
 }
 
+
 // Media queries styling
 h1 {
     @include smartphone {
@@ -73,13 +74,13 @@ h5 {
 
 .edit_recipe {
     @include smartphone {
-        font-size: 80%;
+        font-size: 1em;
     }
 }
 
 .create_recipe {
     @include smartphone {
-        font-size: 80%;
+        font-size: 1em;
     }
 }
 
@@ -94,4 +95,13 @@ h5 {
         font-size: 0.7em;
     }
 }
+
+.get_recipes_step_two {
+    @include smartphoneMedium {
+        font-size: 0.7em;
+    }
+}
+
+
+
 
