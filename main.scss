@@ -56,6 +56,12 @@ h5 {
     @include tablet {}
 }
 
+.recipe_display h1 {
+    @include smartphoneMedium {
+        font-size: 3.5em;
+    }
+}
+
 .button {
     @include smartphone {
         margin: 10%;
