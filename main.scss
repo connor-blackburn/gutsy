@@ -111,7 +111,7 @@ span {
     @include smartphoneLarge {
         font-size: 0.7em;
     }
-      @include tablet {
+    @include tablet {
         font-size: 0.7em;
     }
 }
@@ -126,7 +126,7 @@ span {
     @include smartphoneLarge {
         font-size: 0.7em;
     }
-      @include tablet {
+    @include tablet {
         font-size: 0.7em;
     }
 }
@@ -189,6 +189,10 @@ span {
     @include smartphoneLarge {
         font-size: 0.7em;
     }
+    @include tablet {
+        font-size: 0.7em;
+    }
+
 }
 
 .create_cuisine {
@@ -196,6 +200,9 @@ span {
         font-size: 0.7em;
     }
     @include smartphoneLarge {
+        font-size: 0.7em;
+    }
+    @include tablet {
         font-size: 0.7em;
     }
 }
