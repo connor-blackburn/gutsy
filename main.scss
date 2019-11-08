@@ -38,7 +38,9 @@ h1 {
     @include smartphone {
         font-size: 3em;
     }
-    @include smartphoneMedium {}
+    @include smartphoneMedium {
+        font-size: 5em;
+    }
     @include smartphoneLarge {}
     @include tablet {}
 }
@@ -48,7 +50,7 @@ h5 {
         font-size: 1.5em;
     }
     @include smartphoneMedium {
-        font-size: 2.2em;
+        font-size: 2em;
     }
     @include smartphoneLarge {}
     @include tablet {}
@@ -72,6 +74,12 @@ h5 {
 .create_recipe {
     @include smartphone {
         font-size: 80%;
+    }
+}
+
+.recipe_display {
+    @include smartphoneMedium {
+        font-szie: 0.2em;
     }
 }
 
