@@ -24,13 +24,13 @@
             <h5>Please select the cuisine you want to view recipes within!</h5>
         </div>
         {% for cuisine in cuisines %}
-        <div class="col s12 m4 cardBox flexItem">
+        <div class="col s12 m6 cardBox flexItem">
             <div class="card blue lighten-5 z-depth-2">
                 <div class="card-content white-text">
                     <span class="card-title black-text center-align">{{cuisine.cuisine_name}}</span>
                 </div>
                 <div class="card-action center-align">
-                    <a href="{{url_for('recipe_display', cuisine_id=cuisine._id)}}" class="waves-effect waves-light btn-small green lighten-1">View <span class="hide-on-small-only">{{cuisine.cuisine_name}}</span> Recipes!</a>
+                    <a href="{{url_for('recipe_display', cuisine_id=cuisine._id)}}" class="waves-effect waves-light btn-small green lighten-1">View <span>{{cuisine.cuisine_name}}</span> Recipes!</a>
                 </div>
             </div>
         </div>

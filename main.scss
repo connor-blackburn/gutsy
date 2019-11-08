@@ -42,7 +42,9 @@ h1 {
     @include smartphoneMedium {
         font-size: 5em;
     }
-    @include smartphoneLarge {}
+    @include smartphoneLarge {
+        font-size: 5em;
+    }
     @include tablet {}
 }
 
@@ -53,8 +55,19 @@ h5 {
     @include smartphoneMedium {
         font-size: 2em;
     }
-    @include smartphoneLarge {}
+    @include smartphoneLarge {
+        font-size: 2em;
+    }
     @include tablet {}
+}
+
+span {
+    @include smartphone {
+        display: none;
+    }
+    @include smartphoneMedium {
+        display: none;
+    }
 }
 
 .recipe_display h1 {
@@ -69,6 +82,9 @@ h5 {
     }
     @include smartphoneMedium {
         margin: 10%;
+    }
+    @include smartphoneLarge {
+        margin: 20%;
     }
 }
 
@@ -125,6 +141,3 @@ h5 {
         font-size: 0.7em;
     }
 }
-
-
-
