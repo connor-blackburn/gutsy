@@ -177,7 +177,9 @@ span {
     @include smartphoneLarge {
         font-size: 0.7em;
     }
-
+    @include tablet {
+        font-size: 0.7em;
+    }
 }
 
 .edit_cuisine {
