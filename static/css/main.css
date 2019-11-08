@@ -53,6 +53,9 @@ body {
 @media (max-width: 320px) {
   .edit_recipe {
     font-size: 1em; } }
+@media (min-width: 321px) and (max-width: 375px) {
+  .edit_recipe {
+    font-size: 0.7em; } }
 
 @media (max-width: 320px) {
   .create_recipe {
