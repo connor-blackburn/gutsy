@@ -74,6 +74,9 @@ span {
     @include smartphoneMedium {
         font-size: 3.5em;
     }
+    @include smartphoneLarge {
+        font-size: 3.5em;
+    }
 }
 
 .button {
