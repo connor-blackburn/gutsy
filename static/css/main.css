@@ -64,6 +64,9 @@ body {
 @media (min-width: 376px) and (max-width: 425px) {
   .recipe_display h1 {
     font-size: 3.5em; } }
+@media (min-width: 426px) and (max-width: 768px) {
+  .recipe_display h1 {
+    font-size: 3.5em; } }
 
 @media (max-width: 320px) {
   .button {
