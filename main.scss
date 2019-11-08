@@ -128,6 +128,15 @@ span {
     @include smartphoneMedium {
         font-size: 0.7em;
     }
+    @include smartphoneLarge {
+        font-size: 0.9em;
+    }
+}
+
+.get_recipes_step_two h1 {
+    @include smartphoneLarge {
+        font-size: 3.5em;
+    }
 }
 
 .edit_cuisine_homepage {

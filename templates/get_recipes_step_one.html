@@ -20,7 +20,7 @@
                     <span class="card-title black-text center-align">{{cuisine.cuisine_name}}</span>
                 </div>
                 <div class="card-action center-align">
-                    <a href="{{url_for('get_recipes_step_two', cuisine_id=cuisine._id)}}" class="waves-effect waves-light btn-small green lighten-1">Edit A {{cuisine.cuisine_name}} Recipe!</a>
+                    <a href="{{url_for('get_recipes_step_two', cuisine_id=cuisine._id)}}" class="waves-effect waves-light btn-small green lighten-1">Edit <span>{{cuisine.cuisine_name}}</span> Recipes!</a>
                 </div>
             </div>
         </div>
