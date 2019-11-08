@@ -60,6 +60,10 @@ body {
 
 @media (min-width: 321px) and (max-width: 375px) {
   .recipe_display {
-    font-szie: 0.2em; } }
+    font-size: 1em; } }
+
+@media (min-width: 321px) and (max-width: 375px) {
+  .get_recipes_step_one {
+    font-size: 0.7em; } }
 
 /*# sourceMappingURL=main.css.map */

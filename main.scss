@@ -85,7 +85,13 @@ h5 {
 
 .recipe_display {
     @include smartphoneMedium {
-        font-szie: 0.2em;
+        font-size: 1em;
+    }
+}
+
+.get_recipes_step_one {
+    @include smartphoneMedium {
+        font-size: 0.7em;
     }
 }
 
