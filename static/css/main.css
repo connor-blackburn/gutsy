@@ -114,6 +114,9 @@ body {
 @media (min-width: 321px) and (max-width: 375px) {
   .edit_cuisine_homepage {
     font-size: 0.7em; } }
+@media (min-width: 376px) and (max-width: 425px) {
+  .edit_cuisine_homepage {
+    font-size: 0.7em; } }
 
 @media (min-width: 321px) and (max-width: 375px) {
   .edit_cuisine {
