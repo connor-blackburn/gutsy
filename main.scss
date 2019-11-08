@@ -45,7 +45,9 @@ h1 {
     @include smartphoneLarge {
         font-size: 5em;
     }
-    @include tablet {}
+    @include tablet {
+        font-size: 7em;
+    }
 }
 
 h5 {
@@ -58,7 +60,9 @@ h5 {
     @include smartphoneLarge {
         font-size: 2em;
     }
-    @include tablet {}
+    @include tablet {
+        font-size: 3em;
+    }
 }
 
 span {
@@ -87,6 +91,9 @@ span {
         margin: 10%;
     }
     @include smartphoneLarge {
+        margin: 20%;
+    }
+    @include tablet {
         margin: 20%;
     }
 }
