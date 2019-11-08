@@ -111,6 +111,9 @@ body {
 @media (min-width: 376px) and (max-width: 425px) {
   .get_recipes_step_one {
     font-size: 0.7em; } }
+@media (min-width: 426px) and (max-width: 768px) {
+  .get_recipes_step_one {
+    font-size: 0.7em; } }
 
 @media (min-width: 321px) and (max-width: 375px) {
   .get_recipes_step_two {

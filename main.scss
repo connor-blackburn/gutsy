@@ -138,6 +138,9 @@ span {
     @include smartphoneLarge {
         font-size: 0.7em;
     }
+    @include tablet {
+        font-size: 0.7em;
+    }
 }
 
 .get_recipes_step_two {
