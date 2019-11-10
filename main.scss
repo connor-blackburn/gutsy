@@ -40,7 +40,7 @@ h1 {
         font-size: 3em;
     }
     @include smartphoneMedium {
-        font-size: 5em;
+        font-size: 4em;
     }
     @include smartphoneLarge {
         font-size: 5em;
@@ -94,7 +94,7 @@ span {
         margin: 10%;
     }
     @include smartphoneLarge {
-        margin: 10%;
+        margin: 20%;
     }
     @include tablet {
         margin: 20%;
