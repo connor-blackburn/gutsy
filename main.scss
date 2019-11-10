@@ -88,16 +88,16 @@ span {
 
 .button {
     @include smartphone {
-        margin: 10%;
+        margin: 5%;
     }
     @include smartphoneMedium {
-        margin: 10%;
+        margin: 5%;
     }
     @include smartphoneLarge {
-        margin: 20%;
+        margin: 10%;
     }
     @include tablet {
-        margin: 20%;
+        margin: 10%;
     }
 }
 

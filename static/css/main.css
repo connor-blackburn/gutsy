@@ -70,16 +70,16 @@ body {
 
 @media (max-width: 320px) {
   .button {
-    margin: 10%; } }
+    margin: 5%; } }
 @media (min-width: 321px) and (max-width: 375px) {
   .button {
-    margin: 10%; } }
+    margin: 5%; } }
 @media (min-width: 376px) and (max-width: 425px) {
   .button {
-    margin: 20%; } }
+    margin: 10%; } }
 @media (min-width: 426px) and (max-width: 768px) {
   .button {
-    margin: 20%; } }
+    margin: 10%; } }
 
 @media (max-width: 320px) {
   .edit_recipe {
