@@ -46,7 +46,7 @@ h1 {
         font-size: 4em;
     }
     @include tablet {
-        font-size: 5em;
+        font-size: 7em;
     }
 }
 
@@ -88,16 +88,16 @@ span {
 
 .button {
     @include smartphone {
-        margin: 5%;
+        margin: 10%;
     }
     @include smartphoneMedium {
-        margin: 5%;
+        margin: 10%;
     }
     @include smartphoneLarge {
-        margin: 10%;
+        margin: 5%;
     }
     @include tablet {
-        margin: 10%;
+        margin: 20%;
     }
 }
 
