@@ -24,7 +24,7 @@
                             <div class="card-action edit-buttons center-align">
                                 <a href="{{url_for('edit_recipe', recipe_id =recipe._id)}}" class="waves-effect waves-light btn-small green lighten-1">Edit</a>
                                 <a href="{{url_for('delete_recipe', recipe_id =recipe._id)}}" class="waves-effect waves-light btn-small  red lighten-1">Delete</a>
-                                <u>{{recipe.dish_name}}</u> <span class="hide-on-small-only">- {{recipe.dish_difficulty}} - {{recipe.cuisine_name}}</span>
+                                <u>{{recipe.dish_name}}</u> <span class="hide-on-small-only">- {{recipe.dish_difficulty}} - Serves: {{recipe.serves}}</span>
                             </div>
                         </div>
                     </li>
