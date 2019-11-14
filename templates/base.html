@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-    
+
 <!-- head section-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,7 @@
 
 <body>
     <!-- responsive navigation bar, design aided with materialize and redirecting correctly due to flask routes using 'url_for' -->
-    <header>
+    <nav>
         <ul id="dropdown1" class="dropdown-content">
             <li><a href="{{url_for('get_recipes_step_one')}}">Edit Recipes</a></li>
             <li class="divider"></li>
@@ -36,25 +37,24 @@
             <li class="divider"></li>
             <li><a href="{{url_for('create_cuisine')}}">Create Cuisines</a></li>
         </ul>
-        <nav>
-            <div class="nav-wrapper orange lighten-3">
-                <a href="{{ url_for('home') }}" class="brand-logo">Gutsy</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
-                    <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Cuisines<i class="material-icons right">arrow_drop_down</i></a></li>
-                </ul>
-            </div>
-        </nav>
+        <div class="nav-wrapper orange lighten-3">
+            <a href="{{ url_for('home') }}" class="brand-logo">Gutsy</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Cuisines<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+        </div>
+
 
         <ul class="sidenav" id="mobile-demo">
             <li><a class="dropdown-trigger" href="#!" data-target="dropdown3">Recipes<i class="material-icons right">arrow_drop_down</i></a></li>
             <li><a class="dropdown-trigger" href="#!" data-target="dropdown4">Cuisines<i class="material-icons right">arrow_drop_down</i></a></li>
         </ul>
-    </header>
+    </nav>
     {% block content %} {% endblock %}
     <!-- // -->
-    
+
     <!-- jQuery and Javascript section aiding materialize features -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -64,8 +64,6 @@
             $('.collapsible').collapsible();
             $('.sidenav').sidenav();
             $('select').formSelect();
-            // $('body').css('display', 'none');
-            //$('body').fadeIn(1800);
         });
     </script>
     <!-- // -->

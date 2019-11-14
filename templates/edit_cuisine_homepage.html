@@ -1,32 +1,38 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="container edit_cuisine_homepage">
+<article>
+    <div class="container edit_cuisine_homepage">
 
-    <!-- Welcome message and short instruction -->
-    <div class="row">
-        <div class="heading">
-            <h1>Welcome To The Cuisines Page!</h1>
-            <h6>Please select desired button to modify your relevant cuisine.</h6>
-        </div>
-    </div>
-    <!-- // -->
-
-    <!-- cuisine list display, offering users delete and edit buttons -->
-    <div class="row">
-        {% for cuisine in cuisines %}
-        <div class="col s12 m6">
-            <div class="card blue lighten-5 z-depth-2">
-                <div class="card-content white-text">
-                    <span class="card-title black-text center-align">{{cuisine.cuisine_name}}</span>
-                </div>
-                <div class="card-action center-align">
-                    <a href="{{url_for('edit_cuisine', cuisine_id =cuisine._id)}}" class="waves-effect waves-light btn-small green lighten-1">Edit</a>
-                    <a href="{{url_for('delete_cuisine', cuisine_id =cuisine._id)}}" class="waves-effect waves-light btn-small  red lighten-1">Delete</a>
+        <!-- Welcome message and short instruction -->
+        <header>
+            <div class="row">
+                <div class="heading">
+                    <h1>Welcome To The Cuisines Page!</h1>
+                    <h6>Please select desired button to modify your relevant cuisine.</h6>
                 </div>
             </div>
-        </div>
-        {% endfor %}
+        </header>
+        <!-- // -->
+
+        <!-- cuisine list display, offering users delete and edit buttons -->
+        <section>
+            <div class="row">
+                {% for cuisine in cuisines %}
+                <div class="col s12 m6">
+                    <div class="card blue lighten-5 z-depth-2">
+                        <div class="card-content white-text">
+                            <span class="card-title black-text center-align">{{cuisine.cuisine_name}}</span>
+                        </div>
+                        <div class="card-action center-align">
+                            <a href="{{url_for('edit_cuisine', cuisine_id =cuisine._id)}}" class="waves-effect waves-light btn-small green lighten-1">Edit</a>
+                            <a href="{{url_for('delete_cuisine', cuisine_id =cuisine._id)}}" class="waves-effect waves-light btn-small  red lighten-1">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        <!-- // -->
     </div>
-    <!-- // -->
-</div>
+</article>
 {% endblock %}

@@ -1,158 +1,164 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="container create_recipe">
+<article>
+    <div class="container create_recipe">
 
-    <!-- Heading message providing short instructions -->
-    <div class="row">
-        <div class="heading">
-            <h1>Create Your Recipe!</h1>
-            <h6>Please complete the form below to add your recipe to the cookbook.</h6>
-        </div>
-    </div>
-    <!-- // -->
-
-    <!-- form allowing user to create a reciepe -->
-    <div class="row">
-        <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12 container">
-
-            <!-- A single input field creating the new recipe dish name -->
-            <h5>What Is The Dish Name?</h5>
-            <div class="input-field col s12">
-                <i class="material-icons prefix">create</i>
-                <input id="icon_prefix" type="text" id="recipes" name="dish_name" class="validate" required>
-                <label for="icon_prefix" id="recipes" name="dish_name">Dish Name <span class="hide-on-small-only">e.g. Shepherds Pie</label></span>
+        <!-- Heading message providing short instructions -->
+        <header>
+            <div class="row">
+                <div class="heading">
+                    <h1>Create Your Recipe!</h1>
+                    <h6>Please complete the form below to add your recipe to the cookbook.</h6>
+                </div>
             </div>
-            <!-- A Dropdown Menu For User To Select Recipe Cuisine -->
-            <h5>What Is Your Dish Cuisine?</h5>
-            <div class="input-field col s12">
-                <i class="material-icons prefix">search</i>
-                <select id="recipes" name="cuisine_name" required>
+        </header>
+        <!-- // -->
+
+        <!-- form allowing user to create a reciepe -->
+        <section>
+            <div class="row">
+                <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12 container">
+
+                    <!-- A single input field creating the new recipe dish name -->
+                    <h5>What Is The Dish Name?</h5>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create</i>
+                        <input id="icon_prefix" type="text" id="recipes" name="dish_name" class="validate" required>
+                        <label for="icon_prefix" id="recipes" name="dish_name">Dish Name <span class="hide-on-small-only">e.g. Shepherds Pie</label></span>
+                    </div>
+                    <!-- A Dropdown Menu For User To Select Recipe Cuisine -->
+                    <h5>What Is Your Dish Cuisine?</h5>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">search</i>
+                        <select id="recipes" name="cuisine_name" required>
                 <option value="" disabled selected>Dish Cuisine</option>
                 {% for cuisine in cuisines %}
                     <option value="{{cuisine.cuisine_name}}">{{cuisine.cuisine_name}}</option>
                 {% endfor %}
             </select>
-                <label>Cuisine List</label>
-                <p>Recipe cuisine not here? Create it at 'Cuisines' dropdown at the top of the page.</p>
-            </div>
-            <!-- A Dropdown Menu For A User To Select Recipe Difficulty -->
-            <h5>How Hard Is This Dish To Create?</h5>
-            <div class="input-field col s12">
-                <i class="material-icons prefix">search</i>
-                <select id="recipes" name="dish_difficulty" required>
+                        <label>Cuisine List</label>
+                        <p>Recipe cuisine not here? Create it at 'Cuisines' dropdown at the top of the page.</p>
+                    </div>
+                    <!-- A Dropdown Menu For A User To Select Recipe Difficulty -->
+                    <h5>How Hard Is This Dish To Create?</h5>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">search</i>
+                        <select id="recipes" name="dish_difficulty" required>
                 <option value="" disabled selected>Dish Difficulty</option>
                 {% for difficulties in difficulties%}
                     <option value="{{difficulties.dish_difficulty}}">{{difficulties.dish_difficulty}}</option>
                 {% endfor %}
             </select>
-                <label>Dish Difficulty</label>
-            </div>
-            <!-- A Dropdown Menu For A User To Select How Many People The Recipe Will Serve -->
-            <h5>How Many People Does This Dish Serve?</h5>
-            <div class="input-field col s12">
-                <i class="material-icons prefix">search</i>
-                <select id="recipes" name="serves" required>
+                        <label>Dish Difficulty</label>
+                    </div>
+                    <!-- A Dropdown Menu For A User To Select How Many People The Recipe Will Serve -->
+                    <h5>How Many People Does This Dish Serve?</h5>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">search</i>
+                        <select id="recipes" name="serves" required>
                 <option value="" disabled selected>People Dish Serves?</option>
                 {% for serves in serves %}
                     <option value="{{serves.serves}}">{{serves.serves}}</option>
                 {% endfor %}
             </select>
-                <label>Serves</label>
-            </div>
-            <!-- A Series Of Input Fields For A User To Input All Required Ingredients -->
-            <h5>Ingredients - If any fields are unnecessary, just leave blank (9 max)</h5>
-            <div class="input-field col s12">
-                <i class="material-icons prefix">create</i>
-                <input id="icon_prefix" id="recipes" name="ingredient_1" type="text" class="validate">
-                <label for="icon_prefix">Ingredient 1</label>
-            </div>
-            <div class="input-field col s12">
-                <i class="material-icons prefix">create</i>
-                <input id="icon_prefix" id="recipes" name="ingredient_2" type="text" class="validate">
-                <label for="icon_prefix">Ingredient 2</label>
-            </div>
+                        <label>Serves</label>
+                    </div>
+                    <!-- A Series Of Input Fields For A User To Input All Required Ingredients -->
+                    <h5>Ingredients - If any fields are unnecessary, just leave blank (9 max)</h5>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create</i>
+                        <input id="icon_prefix" id="recipes" name="ingredient_1" type="text" class="validate">
+                        <label for="icon_prefix">Ingredient 1</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create</i>
+                        <input id="icon_prefix" id="recipes" name="ingredient_2" type="text" class="validate">
+                        <label for="icon_prefix">Ingredient 2</label>
+                    </div>
 
-            <div class="input-field col s12">
-                <i class="material-icons prefix">create</i>
-                <input id="icon_prefix" id="recipes" name="ingredient_3" type="text" class="validate">
-                <label for="icon_prefix">Ingredient 3</label>
-            </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create</i>
+                        <input id="icon_prefix" id="recipes" name="ingredient_3" type="text" class="validate">
+                        <label for="icon_prefix">Ingredient 3</label>
+                    </div>
 
-            <div class="input-field col s12">
-                <i class="material-icons prefix">create</i>
-                <input id="icon_prefix" id="recipes" name="ingredient_4" type="text" class="validate">
-                <label for="icon_prefix">Ingredient 4</label>
-            </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create</i>
+                        <input id="icon_prefix" id="recipes" name="ingredient_4" type="text" class="validate">
+                        <label for="icon_prefix">Ingredient 4</label>
+                    </div>
 
-            <div class="input-field col s12">
-                <i class="material-icons prefix">create</i>
-                <input id="icon_prefix" id="recipes" name="ingredient_5" type="text" class="validate">
-                <label for="icon_prefix">Ingredient 5</label>
-            </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create</i>
+                        <input id="icon_prefix" id="recipes" name="ingredient_5" type="text" class="validate">
+                        <label for="icon_prefix">Ingredient 5</label>
+                    </div>
 
-            <div class="input-field col s12">
-                <i class="material-icons prefix">create</i>
-                <input id="icon_prefix" id="recipes" name="ingredient_6" type="text" class="validate">
-                <label for="icon_prefix">Ingredient 6</label>
-            </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create</i>
+                        <input id="icon_prefix" id="recipes" name="ingredient_6" type="text" class="validate">
+                        <label for="icon_prefix">Ingredient 6</label>
+                    </div>
 
-            <div class="input-field col s12">
-                <i class="material-icons prefix">create</i>
-                <input id="icon_prefix" id="recipes" name="ingredient_7" type="text" class="validate">
-                <label for="icon_prefix">Ingredient 7</label>
-            </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create</i>
+                        <input id="icon_prefix" id="recipes" name="ingredient_7" type="text" class="validate">
+                        <label for="icon_prefix">Ingredient 7</label>
+                    </div>
 
-            <div class="input-field col s12">
-                <i class="material-icons prefix">create</i>
-                <input id="icon_prefix" id="recipes" name="ingredient_8" type="text" class="validate">
-                <label for="icon_prefix">Ingredient 8</label>
-            </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create</i>
+                        <input id="icon_prefix" id="recipes" name="ingredient_8" type="text" class="validate">
+                        <label for="icon_prefix">Ingredient 8</label>
+                    </div>
 
-            <div class="input-field col s12">
-                <i class="material-icons prefix">create</i>
-                <input id="icon_prefix" id="recipes" name="ingredient_9" type="text" class="validate">
-                <label for="icon_prefix">Ingredient 9</label>
-            </div>
-            <!-- A Series Of Input Fields For A User To Input All Required Steps To Create Recipe -->
-            <h5>Steps - If any fields are unnecessary, just leave blank (6 max)</h5>
-            <div class="input-field col s12">
-                <i class="material-icons prefix">create</i>
-                <input id="icon_prefix" id="recipes" name="step_1" type="text" class="validate">
-                <label for="icon_prefix">Step 1</label>
-            </div>
-            <div class="input-field col s12">
-                <i class="material-icons prefix">create</i>
-                <input id="icon_prefix" id="recipes" name="step_2" type="text" class="validate">
-                <label for="icon_prefix">Step 2</label>
-            </div>
-            <div class="input-field col s12">
-                <i class="material-icons prefix">create</i>
-                <input id="icon_prefix" id="recipes" name="step_3" type="text" class="validate">
-                <label for="icon_prefix">Step 3</label>
-            </div>
-            <div class="input-field col s12">
-                <i class="material-icons prefix">create</i>
-                <input id="icon_prefix" id="recipes" name="step_4" type="text" class="validate">
-                <label for="icon_prefix">Step 4</label>
-            </div>
-            <div class="input-field col s12">
-                <i class="material-icons prefix">create</i>
-                <input id="icon_prefix" id="recipes" name="step_5" type="text" class="validate">
-                <label for="icon_prefix">Step 5</label>
-            </div>
-            <div class="input-field col s12">
-                <i class="material-icons prefix">create</i>
-                <input id="icon_prefix" id="recipes" name="step_6" type="text" class="validate">
-                <label for="icon_prefix">Step 6</label>
-            </div>
-            <!-- Submit Button -->
-            <div class="row">
-                <button class="btn waves-effect waves-light" type="submit" name="action">Submit Recipe
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create</i>
+                        <input id="icon_prefix" id="recipes" name="ingredient_9" type="text" class="validate">
+                        <label for="icon_prefix">Ingredient 9</label>
+                    </div>
+                    <!-- A Series Of Input Fields For A User To Input All Required Steps To Create Recipe -->
+                    <h5>Steps - If any fields are unnecessary, just leave blank (6 max)</h5>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create</i>
+                        <input id="icon_prefix" id="recipes" name="step_1" type="text" class="validate">
+                        <label for="icon_prefix">Step 1</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create</i>
+                        <input id="icon_prefix" id="recipes" name="step_2" type="text" class="validate">
+                        <label for="icon_prefix">Step 2</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create</i>
+                        <input id="icon_prefix" id="recipes" name="step_3" type="text" class="validate">
+                        <label for="icon_prefix">Step 3</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create</i>
+                        <input id="icon_prefix" id="recipes" name="step_4" type="text" class="validate">
+                        <label for="icon_prefix">Step 4</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create</i>
+                        <input id="icon_prefix" id="recipes" name="step_5" type="text" class="validate">
+                        <label for="icon_prefix">Step 5</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create</i>
+                        <input id="icon_prefix" id="recipes" name="step_6" type="text" class="validate">
+                        <label for="icon_prefix">Step 6</label>
+                    </div>
+                    <!-- Submit Button -->
+                    <div class="row">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit Recipe
             <i class="material-icons right">send</i></button>
+                    </div>
+                </form>
             </div>
-        </form>
-    </div>
-    <!-- // -->
+        </section>
+        <!-- // -->
 
-</div>
+    </div>
+</article>
 {% endblock %}

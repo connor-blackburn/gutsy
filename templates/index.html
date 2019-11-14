@@ -1,42 +1,47 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="container">
-    
-    <!-- welcome message, graphic and pulsing button -->
-    <div class="row center-align hero">
-        <div class="heading">
-            <h1>Welcome To Gutsy</h1>
-            <h5>An online cookbook made by the community. <br/> <u>FOR</u> the community!</h5>
-        </div>
-        <div class="hero_image">
-            <img src="static/images/chefs.png">
-        </div>
-        <div class="button">
-            <a class="btn-floating btn-large waves-effect waves-light blue lighten-1 pulse" href="#cuisine_section"><i class="material-icons">expand_more</i></a>
-        </div>
-    </div>
-    <!-- // -->
-    
-    <!-- cuisine selection areas -->
-    <div id="cuisine_section" class="row flexContainer center-align">
-        <div class="heading">
-            <h1>Cuisine section</h1>
-            <h5>Please select the cuisine you want to view recipes within!</h5>
-        </div>
-        {% for cuisine in cuisines %}
-        <div class="col s12 m6 cardBox flexItem">
-            <div class="card blue lighten-5 z-depth-2">
-                <div class="card-content white-text">
-                    <span class="card-title black-text center-align">{{cuisine.cuisine_name}}</span>
+<article>
+    <div class="container">
+
+        <!-- welcome message, graphic and pulsing button -->
+        <header>
+            <div class="row center-align hero">
+                <div class="heading">
+                    <h1>Welcome To Gutsy</h1>
+                    <h5>An online cookbook made by the community. <br/> <u>FOR</u> the community!</h5>
                 </div>
-                <div class="card-action center-align">
-                    <a href="{{url_for('recipe_display', cuisine_id=cuisine._id)}}" class="waves-effect waves-light btn-small green lighten-1">View <span>{{cuisine.cuisine_name}}</span> Recipes!</a>
+                <div class="hero_image">
+                    <img src="static/images/chefs.png">
+                </div>
+                <div class="button">
+                    <a class="btn-floating btn-large waves-effect waves-light blue lighten-1 pulse" href="#cuisine_section"><i class="material-icons">expand_more</i></a>
                 </div>
             </div>
-        </div>
-        {% endfor %}
+        </header>
+        <!-- // -->
+
+        <!-- cuisine selection areas -->
+        <section>
+            <div id="cuisine_section" class="row flexContainer center-align">
+                <div class="heading">
+                    <h1>Cuisine section</h1>
+                    <h5>Please select the cuisine you want to view recipes within!</h5>
+                </div>
+                {% for cuisine in cuisines %}
+                <div class="col s12 m6 cardBox flexItem">
+                    <div class="card blue lighten-5 z-depth-2">
+                        <div class="card-content white-text">
+                            <span class="card-title black-text center-align">{{cuisine.cuisine_name}}</span>
+                        </div>
+                        <div class="card-action center-align">
+                            <a href="{{url_for('recipe_display', cuisine_id=cuisine._id)}}" class="waves-effect waves-light btn-small green lighten-1">View <span>{{cuisine.cuisine_name}}</span> Recipes!</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        <!-- // -->
     </div>
-    <!-- // -->
-    
-</div>
+</article>
 {% endblock %}
