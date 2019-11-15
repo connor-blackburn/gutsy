@@ -109,6 +109,72 @@ This method is used in many areas throughout the site with UI and UX in mind, ke
 
 ## Technologies used
 
+##### 1. HTML (https://www.w3.org/)
+
+* HTML is used to create the foundations of the website. This includes the structure of the website, some site content, images and main navigation are all features made possible using Hypertext Markup Language.
+
+##### 2. CSS (https://www.w3.org/Style/CSS/Overview.en.html)
+
+* Although the CSS within this project was compiled and processed using Sass (described below), the CSS provides all styling throughout the project. Without this, the page will be very standard and not worthy of deployment. This styling was linked through an external style sheet and was linked through the head section of the base file.
+
+##### 3. Syntactically Awesome StyleSheets / SASS (https://sass-lang.com/)
+
+* Sass is used to create great styling and attributes for the page, which was then compiled into CSS. Many aspects of Sass make it a more effective and efficient way of styling when compared to standard CSS development. I used several partials to separate styling groups, along with variables, mixins and media queries to create rules to call at any time.
+
+##### 4. Google Fonts (https://fonts.google.com/)
+
+* Google fonts are used to receive professional style fonts for the page. They offer a huge catalogue of fonts suitable for any style and theme. The font I chosen to be used on the project would be 'Acme’, and this is present throughout.
+
+##### 5. JavaScript (https://www.javascript.com/)
+
+* The advantages gained using JavaScript can be seen throughout the project. The primary JavaScript libraries used throughout this project would be jQuery and Materialize. Features such as the collapsible pop out boxes, the main navigation bar responsiveness, several simple cards and initialization throughout the site were possible using JavaScript.
+
+##### 6. Github (https://github.com/)
+
+* GitHub is an essential technology to be used for developers across the world. Github is used to store and save the development of the project work and keeps it safe in a remote repository. I push my work regularly with comments to clarify what is new in contrast to my previous commits or saves.
+
+##### 7. Heroku (https://www.heroku.com)
+
+* Heroku is used to store and deploy the project to a live app. As the project is python based, Heroku is the best and most reliable solution for this task. 
+
+## Deployment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
