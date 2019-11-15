@@ -139,6 +139,18 @@ This method is used in many areas throughout the site with UI and UX in mind, ke
 
 ## Deployment
 
+* The deployment process for this process takes advantage of two different services (both explained above in the ‘technologies used’ section), Github and Heroku. 
+
+* The first task was to generate a git repository; using the ‘git init’ command from the terminal. This allows me to have a safe place to store all my work so I could retrieve it from anywhere. (shown below)
+
+* Next the job was to install Heroku, by using the command ‘sudo snap install heroku’. Due to Heroku’s specification; I needed to create a requirements.txt and Procfile. From this point I can then push to both Github and Heroku combined; keeping my work safe and able to push to a live app.
+
+* Once this initial stage is complete, as the project gradually grows with new content and features; I continuously commit all the changes to my git repository. The changes are then pushed to my remote repository with a comment to explain what progress has been made at each point. This will also aid external developers who may look at the code in future, creating well-structured code and committing with relevant comments will help them understand what is happening from commit to commit.
+
+* I can still edit my code while a live version is active. The live app version can be defined as the deployed version, while the code I can still edit and add upon is considered the development version and is still saved to my own private workspace. I use this to edit, upgrade, and test all areas of the project safely while the deployed version stays the same. Once I am happy with an upgrade and I want to apply these to the deployed version, all I need to do is follow the same process as before. Once the new code was pushed on to the remote repository the deployed version is then upgraded for the public to use.
+
+
+## Testing
 
 
 
