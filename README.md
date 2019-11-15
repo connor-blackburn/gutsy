@@ -1,49 +1,109 @@
 # Milestone Project Three – Data Centric Development.
 
-I have created a fully functional online cookbook under the fictional company name ‘Gutsy’. The goal? To create an online cookbook which allows any user to receive, edit, delete and create their own recipes and cuisines for the community to take advantage of.
+I have created a fully functional online community cookbook under the fictional company name ‘Gutsy’. The goal? To create an online cookbook which allows any user to receive, edit, delete and create their own recipes and cuisines for the community to take advantage of.
 
-An extremely simple user interface, a nice bright colour scheme and instructions on how to make the most of relevant pages means the whole experience a user will undertake is a simple and pleasing one. A user does not need to use much user brain power while working on the site; making a positive overall experience.
+Effective navigation, simple user interface, nice bright colour scheme and simple instructions on how to make the most of relevant pages means the whole experience a user will undertake is a simple and effortless one. A user does not need to use much cognitive power while working on the site to make the most of all of the available benefits; creating a positive user experience.
 
-The project was made possible written with the python micro web framework; flask. The project constantly uses a back-end system to push and pull content from a database which is accessible and editable when required. Making the experience completely personal to the user and satisfying to see their creations displayed in a simple, yet beautiful layout for all to see on a range of different device sizes.
+The project was made possible written with the python micro web framework; flask. The project constantly uses a back-end system to push and pull content from the database (MongoDB), which is accessible and editable when required. Creating a completely personal experience to the community of users and making it satisfying to see their creations displayed in a simple, yet beautiful layout for all to see on a range of different device sizes.
 
 ## UX
 
 To give the project its best chance to be a success, it was vital for me to understand who exactly the target audience were, and how to meet their specific needs. The following groups are what I consider to be the 2 main groups, along with an explanation as to why.
 
-**Adventurous family members / chefs wanting to discover new recipes to attempt.**
+##### 1. Adventurous family members / chefs wanting to discover new recipes.
 
-* The site displays all recipes entered to the cookbook in a well organised, easy on the eye manner. The target group is forced make full advantage of this organisation by using the ‘cuisine section’ on the homepage; using it to filter the recipe selection down. This makes the browsing process for recipes on the site much quicker as it filters results down after just one click based on the recipes cuisine.
- 
-* Once a cuisine is chosen, the user will be taken to a page in which all the recipes what fall into the cuisine group are presented in a series of ‘collapsible pop out boxes (implemented using CSS framework; Materialize). The initial presentation of recipes will display the recipe name, dish difficulty and a confirmation of dish cuisine. All this user will have to do is simply press on the specific recipe and information such as the ingredients and steps are all shown as the box ‘pops out’ in a clean manner.
+* The cookbook displays recipes in a well organised, easy on the eye manner. The users are forced make full advantage of this organisation by using the ‘cuisine section’ on the homepage; using the section to filter the recipe selection. This makes the browsing process for recipes on the site much quicker as it filters results down after just one click based on the recipes cuisine. 
 
-**Chefs / food enthusiasts wanting to share their ideas with a community**
+* Once a cuisine is selected, the user will be taken to a page where all the recipes which fall into the cuisine group are presented in a series of collapsible pop out boxes (implemented using CSS framework; Materialize). The initial presentation of the recipes will display the recipe name, dish difficulty and how many people the dish serve. All the user will have to do is simply press on the specific recipe and the full catalogue of information such as the ingredients and steps are all shown as the box ‘pops out’ in an organised display.
 
-* This target group has the ability to document their own recipes to share to the community by taking advantage of the ‘create recipes’ and ‘create cuisine’ sections of the site (accessible via the main navigation at the top of the screen). The user is then presented with a short form which includes all the elements required to create either a new recipe or cuisine. 
+##### 2. Chefs / food enthusiasts wanting to share their ideas with a community.
 
-* Once the form is complete the user will find a clear submit button at the bottom of the page which when clicked; will push the content to the database and will be presented in the cookbook along with the rest of the existing recipes within the same cuisine. 
+* This target group requires the ability to document their own recipes, and to share them to the community. This is achievable with the use of the ‘create recipes’ and ‘create cuisine’ sections of the site (accessible via the main navigation at the top of the screen). The user is then presented with a short form which includes all the elements required to create either a new recipe or cuisine.
 
-* This process is very simple and a user can create their own recipes and cuisines in no more than 4 mouse clicks; requiring little brain power from the user and making the user experience a pleasant one.
+* Once a form is complete, the user will find a clear submit button at the bottom of the page which when clicked; will push the content to the database and will be presented in the cookbook immediately along with the rest of the existing recipes and cuisines.
 
-### User Stories
+* This process is very simple, and a user can create their own recipes and cuisines to share in no more than 4 mouse clicks; requiring little brain power and making the user experience positive. 
 
-##### As a casual user, I want to be able to locate desired recipes quick and easy, so I don’t have to spend time searching books or the internet instead.**
+## User Stories
 
-* The ease of use throughout the website was vital, as I understand that if a user must think (for even 5 seconds); you are vulnerable for loosing that user forever. In consideration for this, I made the functionality throughout the site achievable in very low amount of click, and low brain power from the user.
+##### 1. As a casual user, I want to be able to locate desired recipes quick and easy, so I don’t have to spend time browsing books or other websites instead.
 
-* In this situation and to achieve this user story I developed the following. When the site initially loads; the user is presented with a welcome message and a blue pulsing button (with a downwards arrow inside) indicating the user should either press it or simply scroll down to view content. The user then arrives at the ‘cuisine section’, where they see a range of different cuisines to choose from and when their desired cuisine is pressed; took to a page presenting all relevant recipes and making it very quick and easy to find exactly what they want. 
+* The ease of use factor throughout the cookbook was vital, as I understood that if a user must think, for even 5 seconds; you are vulnerable for loosing that user forever. In consideration for this, I made the browsing functionality throughout the site achievable in very low amount of click, and low brain power from the user.
 
-* A user can realistically get from the homepage, to their recipe in full description in no more than 3 clicks, every single time. 
+* In this situation and to achieve this user story I developed the following. When the site initially loads; the user is presented with a welcome message and a blue pulsing button (with a downwards arrow inside) indicating the user should either press it or simply scroll down to view content. The user then arrives at the ‘cuisine section’, where they see a range of different cuisines to choose from in a clean, easy to read manner. when their desired cuisine is selected; they are directed to a page displaying all relevant recipes and making it quick and easy to find the recipe they want.
 
-##### As a person who wishes to share their own ideas, I want to be able to document and enter my own cuisines and recipes to the cookbook, so I only need to share the ideas once for everyone.
+* A user can realistically get from the homepage, to their recipe in full description in no more than 3 clicks.
 
-* The process of creating both recipes and cuisines are very similar. The user is presented with a main navigation bar (or clickable burger button on smaller devices), where they are given two main sections; recipes and cuisines. Once selected the relevant section they are then given two further subsections; edit and create.
+##### 2. As a food enthusiast who wishes to share my own ideas, I want to be able to document and enter my own cuisines and recipes into the cookbook, but it needs to be quick and easy for me.
 
-* Once create is selected a user is then directly taken to a short form where once completed; the recipe or cuisine is instantly pushed to the database and the user is then redirected to the homepage, allowing access to the new recipe or cuisine straight away in the same method as explained above in the first user story.
+* The process of creating both recipes and cuisines are very similar. The user is presented with a main navigation bar (or clickable burger button on smaller devices), where they are given two main sections; recipes and cuisines. Once the relevant section is selected the user is then given two further subsections; edit and create.
 
-* Each form field has a relevant placeholder; meaning the exact use of each field is immediately understandable for the user, which eradicates a large portion of natural human error and makes for a much cleaner cookbook.
+* For the sake of this scenario; after the create subsection is chosen, a user is then directly taken to a relevant short form. Once this form is completed; the recipe or cuisine is instantly pushed to the database. The new content is then instantly accessible throughout the cookbook for the community of users.
 
-* Where possible the user is presented with dropdown boxes for input values, examples include dish difficulty and how many people each dish serves. The reason for this is so the input throughout the cookbook is consistent and it means it is impossible for the user to input an incorrect value.
+* Each form input field have relevant placeholders; meaning the exact use of each field is immediately understandable for the user, which eradicates a large portion of natural human error and makes for a much cleaner cookbook.
 
-* All these features make the process of creating recipes and cuisines a quick one, and as always; does not require a lot of brain power from the user and is immediately understandable. Creating a positive user experience and a much cleaner cookbook for the community to take advantage of.
+* Where possible, the user is presented with a selection dropdown menu for input values (prominent on the recipe creation form). The examples include dish difficulty, recipe cuisine type and how many people each dish serves. The reason for this is so the input throughout the cookbook is consistent and it means it is impossible for the user to input invalid data.
 
-##### As a user, if I see an error in a recipe or cuisine or simply want to update my own contributions, I want to be able to edit these quickly and easily so the cookbook can remain up to date and fresh.
+* All these features make the process of creating recipes and cuisines a quick one, and as always; does not require a lot of cognitive power from the user and is immediately understandable. Creating a positive user experience and makes for a cleaner cookbook for the community to take advantage of.
+
+##### 3. As a user, if I see an error in a recipe or cuisine, or simply want to update my own contributions. I want to be able to modify these quickly and easily so the cookbook can remain up to date and fresh.
+
+* This process is can be considered very similar for the user when comparing to the method for creating a recipe or cuisine. When the user is presented with the subsections ‘create’ and ‘edit’ within the main navigation; they shall proceed by pressing edit to be directed to the relevant page (differing for recipe and cuisine).
+
+* If a user decides to edit a cuisine, they will be directed to the edit cuisine homepage and will be presented with all cuisines within the cookbook, taking advantage of simple card design, creating minimal and clean aesthetics so the user has a clear view of the options in front of them; without straining the eyes. They are also offered extra buttons; edit and delete.
+
+* The delete button will immediately remove the cuisine from the cookbook and will completely delete the cuisine from the database.
+
+* If a user selects the cuisine edit button however; the page they are directed to will be a clone of the create cuisine form. The only difference; the form will be pre-loaded with the selected cuisine ready to be edited within the input field. Once the desired modification is made within the form, the submit button will push the data to the database and will be presented correctly to the cookbook for the community to see.
+
+* The process for editing a recipe is very similar. If the user selects the ‘edit recipe’ subsection on the main navigation; they will be taken to the edit recipe homepage where once again all cuisines are displayed for the user to choose from. The reason they are presented with the cuisines first is so the user can access specific filtered recipes quicker and make the whole experience easier and quicker for the user.
+
+* Once the user has selected the cuisine in which the recipe they want to edit will be within; they will be shown all relevant recipes with two buttons once again, edit and delete. The delete button will immediately remove the recipe from the cookbook and the edit button will direct the user to a clone of the create recipe form with the same difference as explained before; the form will be pre-loaded with the chosen recipe’s content already inserted into the forms input fields. Once all modifications have been made, the submit button will push the new content to the database and the cookbook will then be up to date straight away.
+
+##### 4. As a user, I want to be able to navigate across all pages of the cookbook quick and easy so I can spend time on more important things.
+
+* I kept in consideration that given the nature of the project, users will not want to spend countless hours searching through the site getting from once place to another. The process of getting from A to B had to be as simple as possible; this was a must! 
+
+* I took advantage of the CSS framework ‘Materialize’ and used their responsive dropdown navigation bar. The advantages of this was a very simple installation for a very robust feature on my part, but for the user it provides an amazing central hub for navigation. Users naturally understand to use nav bars to get around modern websites, so the user does not have to think at all when it comes to where to look and how to get around the site.
+
+* The navigation bar offers (as explained previously) two main sections; recipe and cuisines, along with two subsections for each; edit and create. The navigation bar will also transform into a clickable burger button on smaller devices to aid the visualisation and keep the design minimal and clean. The user can get to wherever they want to be in a maximum of 5 clicks (from the home page to on a fully loaded edit recipe/cuisines form on mobile), making the site easy to use and satisfying for the user.
+
+## Features
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
