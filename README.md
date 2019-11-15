@@ -70,6 +70,84 @@ To give the project its best chance to be a success, it was vital for me to unde
 
 ## Features
 
+##### 1. Main navigation bar
+
+* Naturally positioned at the very top of the site following a modern website’s logical order. The navigation bar (and burger button clickable button on mobile) offers a user a perfect hub to get from A to B within very few clicks and cognitive effort. Two main sections followed by two subsections means the users can get to anywhere they want to go through the navigation bar. Responsive elements mean no matter what device is used; anyone can take full advantage of the main navigation features.
+
+##### 2. Collapsible pop-out bars for recipe display
+
+* Collapsible pop-out bars are used to displays recipes to the user. The reasons being while a user is actively searching for a desired recipe within a relevant cuisine type, the recipes will be placed one by one in a neat order and only displaying vital first glance information (dish name, dish difficulty and how many people the dish will serve) and a relevant food icon. This current state aids the design and compliments the minimalistic aesthetics of the website, keeping it clean and easily scannable for people browsing recipes on the cookbook.
+
+* Once a recipe is selected, the bar will collapse down and reveal the full description of the recipe. Which includes steps and ingredients along with confirmation of the dish name, dish difficulty and how many people the dish will serve. The steps and ingredients sections of the display are indented to aid readability and make the experience as smooth and positive as possible.
+
+##### 3. Functioning create + edit forms
+
+* Fully functioning forms are offered to the user, with relevant placeholders and headings to indicate the exact use of each form field. Selection drop down menus are also used to eliminate human error as much as possible and to also maintain consistent result display throughout the project. Once the short forms are submitted, the content will be pushed to the database and the dynamic content throughout the cookbook will be updated. 
+
+* Both the create and edit forms are a clone of one another in the related subject (recipes and cuisines), however the edit form will generate pre-loaded content from the database related to the chosen recipe or cuisine. 
+
+##### 4. Dynamic content from database (MongoDB)
+
+* Throughout the site, dynamic content is pulled from the database and displayed to the user through making the most of jinja templating. This feature is what gives the cookbook its magic and allows the users to be able to create and document their ideas for all to see with very minimal code.
+
+##### 5. Hidden content on smaller screens to aid UX and UI
+
+* I have hidden certain content on small devices when compared to a full pc monitor screen. The reason for this; to maintain a nice, clear and minimalistic design. Attempting to cram all the same content from a large screen to a smaller device puts the site at risk of becoming cluttered and untidy on the eye. One example of hidden content we have on the site is under 375px device width, the cuisine section will hide the dynamic part of the selection button; the button will display ‘view recipes’ to ‘review *specific cuisine type* recipes’ once that breakpoint has been broken.
+This method is used in many areas throughout the site with UI and UX in mind, keeping the aesthetics of the site a positive feature.
+
+##### 6. Easy on the eye colour scheme
+
+* The bright colour scheme used on the project was very intentional. The background is a bright white/grey with a light relevant outline of food. The main navigation bar is a light orange and a range of strong, colourful buttons means the website is extremely readable and is easy on the eye. 
+
+* Due to the bright colours and a large black font, the user does not need to struggle at any point within the site to read any content or instructions; this makes the users life very easy and makes for an attractive website for all the use.
+
+## Left to implement
+
+##### 1. Further filter features on recipe display page
+
+* Along with the current filter-by cuisine feature, I believe the project would benefit from further filter features on the actual recipe display pages. These could include filtering by difficulty, or number of people a dish serves. Features such as these will further aid the user to create a positive experience, which should always be considered.
+
+## Technologies used
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
