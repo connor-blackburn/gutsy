@@ -152,6 +152,87 @@ This method is used in many areas throughout the site with UI and UX in mind, ke
 
 ## Testing
 
+Testing is a vital aspect of any project, with ‘Gutsy’ being no different. Without thorough testing, you leave yourself and your project wide open for mistakes, user complaints and a negative experience for users; resulting in them leaving and not coming back.
+
+Naturally during the testing processes of my project, I met several little bugs along the way which needed to be resolved before carrying on. I believe a developer can never be too careful when testing for errors as a deployed website full of errors can be disastrous.
+
+I needed to make sure the goals stated by my written user stories were easily achievable for any user (regardless of IT knowledge or experience).  
+
+I have listed the user stories below and will explain how each is easily achievable for the user with very low cognitive power needed.
+
+##### 1. As a casual user, I want to be able to locate desired recipes quick and easy, so I don’t have to spend time browsing books or other websites instead.
+
+* This user story was a priority of mine, if the user came across difficulty searching and finding recipes; they would simply leave the site and look somewhere else, without any doubt. 
+
+* Baring this in mind, on the homepage of the website (above-the-fold on all device), the users are shown a pulsing blue button aiming downwards. The reason being is this indicates to the user that they must either scroll down or press the button to uncover the benefits of the cookbook, without even thinking about it.
+
+* From here they are presented with a range of different cuisines with a welcome message and very short instruction, educating to the user that they can go ahead and select a cuisine which their desired recipe will fall into the same category. The process is extremely quick, and it also filters recipes before they are even displayed, making for more consistent and clean recipe display pages.
+
+* I tested several different ways to display the cuisine selection cards, however taking advantage of “Materialize” simple cards gave me a range of advantages. The main advantages being that I could display a high number of options/cuisines in a clean and organised manner, it gave me ample room to display a header and relevant buttons while dynamically pulling in content from the database and it allowed me to create a well organised responsive design which does not affect the quality of styling on a smaller device.
+
+* A user can go from the homepage to opening their recipes full description within 3 click maximum, saving a great deal of time and effort from the user.
+
+##### 2. As a food enthusiast who wishes to share my own ideas, I want to be able to document and enter my own cuisines and recipes into the cookbook, but it needs to be quick and easy for me.
+
+* A successful project which relies on a community input must make the process very simple. People are busy and do not have/want the time to spend it struggle trying to share their own ideas on a cookbook, if the process is difficult; they will not do it and this leads to an empty community cookbook which is no good to anyone.
+
+* This user story caters the chefs/ food enthusiasts wanting to share their own ideas, without this target group; the cookbook would not be a success. People need to be willing to share their own ideas first before anyone could possibly visit the site and read them. For this reason, developing a solid method to creating recipes and cuisines was a must, as the project can be considered a failure without it.
+
+* The route to the create pages is a simple one, the main navigation bar (positioned at the top of the page) is initially split into two section; recipes and cuisines. This immediately can guide the user into the right path, clicking the section in relation to what they want to create. Following this step, they are then presented to a further two subsections; edit and create. In this scenario, the user will select create.
+
+* They will immediately be directed at the relevant create form, which has numerous input field headings, placeholders and selection inputs where possible (especially on the create recipe form) to minimize human error and confusion. The results of this? A quick and easy way to document your ideas to a community of people will very little effort.
+
+* It was due to testing that resulted the addition of several placeholders and headings. Although the process is understandable for people who share a passion for food and recipe creating; the goal was to ensure the everyday person, even little no technology experience can arrive at the page and create a recipe or cuisine without very few minutes. The easy the process for the user; the better. 
+
+##### 3. As a user, if I see an error in a recipe or cuisine, or simply want to update my own contributions. I want to be able to modify these quickly and easily so the cookbook can remain up to date and fresh.
+
+* As the community essentially creates the cookbook itself, eventually you will come across simple errors which cannot be avoided, such as typo’s or an incorrect section input. This is only natural and is guaranteed to happen. 
+
+* For this reason, it was very important for me to develop an area for users to go back into their contributions and edit where necessary. How was best way to do this? Create a clone of the exact method a user takes to create a recipe/cuisine but give the form a slightly altered use. Going back to the main navigation and two main sections of it (recipes and cuisines), for this scenario; we will say the user selects edit. 
+
+* If a user spots a mistake within one of the cuisines within the cookbook and they select the edit cuisines tab within the main navigation; they will be directed to the edit cuisine homepage. This page displays the cuisine the same way as the homepage, the only difference this time is that the user is offered two different buttons to choose from, edit and delete.
+
+* Like the homepage; testing was carried out to see which style was more efficient on displaying the cuisines for both aesthetics and quality of responsiveness, which resulted in the simple card design again. The same can be said about the colour scheme of the two buttons, they needed to stand out but also give meaning to the use of the button without the user having to offer any cognitive power to figure it out. In the end I believed green for edit and red for delete gave a clear indication for what each button may do and makes the page look very aesthetically pleasing and makes the user experience a better one. 
+
+* If a user selects the delete button, the cuisine would disappear and would be removed from the database and cookbook. If a user selected edit, they would be directed to a page which is a clone of the create form, but this time the input fields will be pre-loaded with all the relevant content, so all a user would need to do is make the correct adjustments and submit them to push the new content to the cookbook. 
+
+* Similarly, if the user selected edit recipe, they will again be directed to a page with the cuisines listed, but this time it will be for the sake of filtering recipe display (just like the homepage). Once a relevant cuisine is selected all the necessary recipes will be presented with the same two buttons as mentioned previous for the edit cuisines homepage; edit and delete. The process following is the same, with the delete button removing the recipe and the edit button generating a clone of the create form but with the input fields already pre-loaded with the correct information ready to be modified. 
+
+* This whole process was developed and tested with the user in mind, the steps from the homepage to edit form or the delete button was very intentional. It would have been easy to gather all of the recipes in the cookbook and list them in one place and let the user find and edit it themselves, but this would not be practical or efficient for a user and would not end in a successful project. The process includes easy on the eye card design, filtering (cuisine selection for recipe edit), access from the main navigation and guidance on each page. All of this is to help the user as much as possible and make the process as simple as possible.
+
+##### 4. As a user, I want to be able to navigate across all pages of the cookbook quick and easy so I can spend time on more important things.
+
+* One of the most important aspects of the project during the planning stages was to ensure the user can get from the homepage, to anywhere they want to be in a minimal number of steps/clicks. I believe this fact is apparent when viewing the final product.
+
+* Through the successful use of the responsive main navigation, users can get to anywhere at all in the site with very little effort, no what device, or no matter where they want to get to.
+
+Another prominent goal of the project was to successfully develop a fully responsive website, making sure the cookbook works and looks brilliant no matter what device size. This process proved successful but naturally took a lot of trial and error in terms of features such as font sizing, positioning and hiding certain descriptions on smaller devices. It was made possible using media queries and styling based within specific breakpoint parameters. This styling was written in SASS and then compiled into CSS.
+
+I did naturally come across some bugs while within the testing process of the project. An example of this is the fact I felt the need to re-structure the database to aid the create/edit process for recipes. I was having a lot of trouble pulling content such as dish difficulties to display to the user, it was either pulling every option submitted to the site, or none. The solution I found was to create separate collections within my MongoDB Atlas database and pull the content from them separately and combine once submitted to form the recipe. This applied for the ‘serves’, ‘dish difficulty’ and ‘cuisine’ sections. This made for a more structured database and an effective working cookbook, allowing users to edit and create recipes successfully.
+
+Another problem I came across during development was that my stylesheet was getting very cluttered and disorganised. To battle this and create some order within the styling, I converted all the CSS to SASS. Separating styling into separate partials, I made use of mixins and media queries and then compiled the SASS to CSS successfully. This aids the styling organisation a huge amount, speeds up development and makes it much easier later to make any necessary modifications. 
+
+Another minor error I came across during the testing process was a fade in function on the cookbook. When the site loaded up, the content faded in smoothly, this was a great idea on paper. During my own manual testing on the site I found this feature irritating and repetitive, if I found this during production, chances are users will feel the same. Due to this reason, I then decided to remove it for the sake of user experience.
+
+## Credits 
+##### Content 
+
+* No external source of content was used for this project.
+
+##### Media
+
+* The hero image and license can be seen here - https://pixabay.com/illustrations/chef-character-cook-gourmet-1417239/
+
+* The background image can be found here- http://www.heropatterns.com/
+* With License here - https://creativecommons.org/licenses/by/4.0/
+
+##### Acknowledgements
+
+
+
+
+
+
 
 
 
