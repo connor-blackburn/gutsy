@@ -221,12 +221,11 @@ Another minor error I came across during the testing process was a fade in funct
 
 ##### Media
 
-* The hero image and license can be seen here - https://pixabay.com/illustrations/chef-character-cook-gourmet-1417239/
-
-* The background image can be found here- http://www.heropatterns.com/
-* With License here - https://creativecommons.org/licenses/by/4.0/
+* [Chefs hero image by Pixabay](https://pixabay.com/illustrations/chef-character-cook-gourmet-1417239/) under the [Pixaby license](https://pixabay.com/service/license/).
 
 ##### Acknowledgements
+
+* ["I Like Food" SVG Background by Hero Patterns](http://www.heropatterns.com/) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 
 
